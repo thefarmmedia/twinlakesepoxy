@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | Twin Lakes Epoxy | West Plains, MO | 870-277-6195</title>
+  <meta name="description" content="Tips and guides on epoxy garage floors, countertops, enclosed trailer coatings, and concrete care from Twin Lakes Epoxy in West Plains, MO."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--accent:#b8862c;--accent-dark:#8f671f;--accent-glow:rgba(184,134,44,.18);--gold:#3a8dd0;--gold-dark:#1b5a8f;--gold-glow:rgba(58,141,208,.18);--black:#000;--bg:#090909;--bg2:#111;--bg3:#181818;--bg4:#222;--border:rgba(255,255,255,.07);--gray:#888;--gray-light:#bbb;--white:#fff;--font-d:'Bebas Neue',sans-serif;--font-c:'Barlow Condensed',sans-serif;--font-b:'Barlow',sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--white);font-family:var(--font-b);overflow-x:hidden;line-height:1.6}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .topbar{background:var(--accent);padding:7px 32px;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-c);font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;flex-wrap:wrap;gap:8px}
+    .topbar-l{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+    .topbar-r{display:flex;gap:16px;align-items:center}
+    .t-social{display:flex;gap:8px}
+    .t-social a{width:26px;height:26px;background:rgba(0,0,0,.25);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900}
+    nav{background:var(--black);border-bottom:2px solid var(--accent);padding:0 36px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;height:70px}
+    .nav-logo img{height:52px;width:auto}
+    .nav-links{display:flex;gap:24px;list-style:none;font-family:var(--font-c);font-weight:700;font-size:14px;letter-spacing:.07em;text-transform:uppercase}
+    .nav-links a{color:var(--gray-light);transition:color .2s;padding:4px 0;border-bottom:2px solid transparent}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);border-bottom-color:var(--accent)}
+    .nav-cta{background:var(--accent)!important;color:var(--white)!important;padding:9px 20px!important;border-radius:4px!important;border-bottom:none!important;font-weight:900!important}
+    .nav-cta:hover{background:var(--accent-dark)!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px}
+    .mob-menu{display:none;flex-direction:column;background:var(--black);border-top:1px solid var(--border);padding:18px 24px;gap:0;font-family:var(--font-c);font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+    .mob-menu a{color:var(--gray-light);padding:11px 0;border-bottom:1px solid var(--border);display:block}
+    .mob-menu a:last-child{border-bottom:none;color:var(--accent)}
+    .mob-menu.open{display:flex}
+    .breadcrumb{background:var(--bg2);border-bottom:1px solid var(--border);padding:12px 40px;font-family:var(--font-c);font-size:13px;font-weight:600;letter-spacing:.05em;color:var(--gray)}
+    .breadcrumb a{color:var(--gray)}
+    .breadcrumb a:hover{color:var(--accent)}
+    .breadcrumb span{color:var(--gray-light);margin:0 8px}
+    .page-hero{min-height:36vh;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--bg2)}
+    .ph-inner{position:relative;z-index:1;max-width:1300px;margin:0 auto;width:100%;padding:56px 40px;text-align:center}
+    .ph-h1{font-family:var(--font-d);font-size:clamp(42px,6vw,76px);line-height:.93;margin-bottom:12px}
+    .ph-h1 .r{color:var(--accent)}
+    .ph-sub{font-family:var(--font-c);font-size:17px;font-weight:600;color:var(--gray-light);letter-spacing:.04em;text-transform:uppercase;max-width:640px;margin:0 auto}
+    .sec{padding:56px 40px 84px}
+    .inner{max-width:1300px;margin:0 auto}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .bc{background:var(--bg3);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .25s,transform .25s;display:flex;flex-direction:column}
+    .bc:hover{border-color:rgba(47,127,192,.4);transform:translateY(-3px)}
+    .bc-img{height:180px;overflow:hidden;background:var(--bg4)}
+    .bc-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+    .bc:hover .bc-img img{transform:scale(1.07)}
+    .bc-body{padding:20px;flex:1;display:flex;flex-direction:column}
+    .bc-cat{font-family:var(--font-c);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+    .bc-t{font-family:var(--font-c);font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;line-height:1.2}
+    .bc-d{font-size:13px;color:var(--gray-light);line-height:1.65;flex:1}
+    .bc-lnk{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-c);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:14px}
+    .bc-meta{font-size:11px;color:var(--gray);font-family:var(--font-c);letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
+    .cta-band{background:linear-gradient(135deg,var(--gold),var(--gold-dark));padding:52px 40px;text-align:center;position:relative;overflow:hidden;color:#1a1200}
+    .cta-band h2{font-family:var(--font-d);font-size:clamp(32px,4.5vw,58px);margin-bottom:10px}
+    .cta-band p{font-family:var(--font-c);font-size:16px;font-weight:600;letter-spacing:.06em;opacity:.85;margin-bottom:24px;text-transform:uppercase}
+    .btn{display:inline-block;font-family:var(--font-c);font-weight:900;letter-spacing:.1em;text-transform:uppercase;border-radius:5px;cursor:pointer;transition:all .2s;border:none}
+    .btn-white{background:var(--white);color:var(--gold-dark);padding:14px 32px;font-size:15px}
+    .btn-blk{background:var(--black);color:var(--white);padding:13px 30px;font-size:15px;border:2px solid rgba(255,255,255,.25);margin-left:12px}
+    footer{background:var(--black);border-top:2px solid var(--gold);padding:52px 40px 26px}
+    .footer-in{max-width:1300px;margin:0 auto}
+    .footer-top{display:grid;grid-template-columns:260px 1fr 1fr 1fr;gap:36px;margin-bottom:40px}
+    .fl img{height:52px;width:auto;margin-bottom:11px;border-radius:50%}
+    .fl-tag{font-size:13px;color:var(--gray);line-height:1.65;margin-bottom:14px}
+    .fl-soc{display:flex;gap:8px}
+    .fs-a{width:32px;height:32px;background:var(--bg3);border:1px solid var(--border);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+    .fs-a:hover{background:var(--accent);border-color:var(--accent)}
+    .fc-t{font-family:var(--font-c);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+    .fl-links{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .fl-links a{font-size:13px;color:var(--gray-light);display:flex;align-items:center;gap:5px}
+    .fl-links a::before{content:'›';color:var(--accent);font-size:14px}
+    .fl-links a:hover{color:var(--white)}
+    .footer-bot{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--gray);font-family:var(--font-c);letter-spacing:.04em}
+    .footer-bot a:hover{color:var(--accent)}
+    .sticky-mob{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--black);border-top:2px solid var(--accent);padding:10px 14px;gap:9px}
+    .sticky-mob a{flex:1;text-align:center;padding:12px;border-radius:5px;font-family:var(--font-c);font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    .s-call{background:var(--accent);color:var(--white)}
+    .s-quote{background:var(--bg3);color:var(--white);border:1px solid var(--border)}
+    @media(max-width:1100px){.blog-grid{grid-template-columns:repeat(2,1fr)}.footer-top{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){nav{padding:0 18px}.nav-links{display:none}.hamburger{display:flex}.sec{padding:40px 18px 60px}.topbar{display:none}.sticky-mob{display:flex}body{padding-bottom:70px}.blog-grid{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr}.footer-bot{flex-direction:column;text-align:center}.breadcrumb{padding:10px 18px}}
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-l"><span>📞 <a href="tel:8702776195">870-277-6195</a></span><span style="opacity:.5">|</span><span>📞 <a href="tel:4172938496">417-293-8496</a></span></div>
+  <div class="topbar-r"><span style="opacity:.8">West Plains, MO · 75-Mile Service Radius</span><div class="t-social"><a href="#" target="_blank">f</a><a href="#" target="_blank">ig</a></div></div>
+</div>
+
+<nav>
+  <a href="/index.html" class="nav-logo"><img src="images/twinlakes-logo.png" alt="Twin Lakes Epoxy Logo West Plains MO"/></a>
+  <ul class="nav-links">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/residential.html">Residential</a></li>
+    <li><a href="/commercial.html">Commercial</a></li>
+    <li><a href="/gallery.html">Gallery</a></li>
+    <li><a href="/colors.html">Colors</a></li>
+    <li><a href="/reviews.html">Reviews</a></li>
+    <li><a href="/contact.html" class="nav-cta">Free Estimate</a></li>
+  </ul>
+  <div class="hamburger" id="hbtn"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-menu" id="mmenu">
+  <a href="/index.html">Home</a><a href="/about.html">About</a><a href="/gallery.html">Gallery</a><a href="/faq.html">FAQ</a>
+  <a href="/contact.html">Get Free Estimate →</a>
+</div>
+
+<div class="breadcrumb"><a href="/index.html">Home</a><span>›</span>Blog</div>
+
+<section class="page-hero">
+  <div class="ph-inner">
+    <h1 class="ph-h1">From the <span class="r">Blog</span></h1>
+    <p class="ph-sub">Tips, comparisons, and honest advice on epoxy floors, countertops, and trailer coatings.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="inner">
+    <div class="blog-grid">
+      <div class="bc">
+        <div class="bc-img"><img src="epoxy-garage-floor-springfield-mo-1.jpg" alt="Epoxy garage floor cost Missouri" loading="lazy"/></div>
+        <div class="bc-body"><div class="bc-cat">Buyer's Guide</div><div class="bc-meta">6 min read</div><div class="bc-t">How Much Does an Epoxy Garage Floor Cost?</div><p class="bc-d">Real pricing breakdowns for West Plains area homeowners — 1-car, 2-car, 3-car garages, and what drives the price up or down.</p><a href="#" class="bc-lnk">Read Article →</a></div>
+      </div>
+      <div class="bc">
+        <div class="bc-img"><img src="epoxy-flake-color-option-9.jpg" alt="Epoxy countertop guide" loading="lazy"/></div>
+        <div class="bc-body"><div class="bc-cat">Countertops</div><div class="bc-meta">5 min read</div><div class="bc-t">Epoxy Countertops vs. Granite: What's Right for You?</div><p class="bc-d">A side-by-side look at cost, durability, and maintenance between epoxy and natural stone countertops.</p><a href="#" class="bc-lnk">Read Article →</a></div>
+      </div>
+      <div class="bc">
+        <div class="bc-img"><img src="commercial-floor-coating-springfield-mo-1.jpg" alt="Enclosed trailer floor coating guide" loading="lazy"/></div>
+        <div class="bc-body"><div class="bc-cat">Trailers</div><div class="bc-meta">4 min read</div><div class="bc-t">Why Your Enclosed Trailer Floor Needs More Than Paint</div><p class="bc-d">The real difference between painted plywood decking and a properly coated trailer floor.</p><a href="#" class="bc-lnk">Read Article →</a></div>
+      </div>
+      <div class="bc">
+        <div class="bc-img"><img src="epoxy-garage-floor-springfield-mo-3.jpg" alt="Polyaspartic vs epoxy floor comparison" loading="lazy"/></div>
+        <div class="bc-body"><div class="bc-cat">Product Comparison</div><div class="bc-meta">8 min read</div><div class="bc-t">Polyaspartic vs Epoxy: Which Is Actually Better?</div><p class="bc-d">An honest comparison of standard epoxy and polyaspartic/polyurea coatings — durability, UV stability, and cost.</p><a href="#" class="bc-lnk">Read Article →</a></div>
+      </div>
+      <div class="bc">
+        <div class="bc-img"><img src="full-flake-garage-floor-springfield-mo-1.jpg" alt="Why garage floors fail" loading="lazy"/></div>
+        <div class="bc-body"><div class="bc-cat">Homeowner Education</div><div class="bc-meta">5 min read</div><div class="bc-t">Why Garage Floor Coatings Fail (And How to Avoid It)</div><p class="bc-d">The truth about peeling floors and failed DIY kits — what causes them and what proper installation looks like.</p><a href="#" class="bc-lnk">Read Article →</a></div>
+      </div>
+      <div class="bc">
+        <div class="bc-img"><img src="patio-concrete-coating-springfield-mo-2.jpg" alt="Best coating for Ozarks weather" loading="lazy"/></div>
+        <div class="bc-body"><div class="bc-cat">Ozarks Climate</div><div class="bc-meta">4 min read</div><div class="bc-t">Best Coating for the Ozarks' Weather Extremes</div><p class="bc-d">Freeze-thaw cycles, humid summers, and UV exposure — here's what actually holds up long-term in our region.</p><a href="#" class="bc-lnk">Read Article →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Ready to Start Your Project?</h2>
+  <p>Free estimates. Honest pricing.</p>
+  <a href="/contact.html" class="btn btn-white">Get My Free Estimate</a>
+  <a href="tel:8702776195" class="btn btn-blk">📞 Call 870-277-6195</a>
+</div>
+
+<footer>
+  <div class="footer-in">
+    <div class="footer-top">
+      <div class="fl"><img src="images/twinlakes-logo.png" alt="Twin Lakes Epoxy and Concrete Coatings"/><p class="fl-tag">West Plains, MO's epoxy &amp; concrete coating contractor. Serving a 75-mile radius.</p><div class="fl-soc"><a href="#" class="fs-a" target="_blank">f</a><a href="#" class="fs-a" target="_blank">ig</a></div></div>
+      <div><div class="fc-t">Services</div><ul class="fl-links"><li><a href="/counter-tops.html">Epoxy Counter Tops</a></li><li><a href="/garage-floors.html">Epoxy Garage Floors</a></li><li><a href="/enclosed-trailers.html">Enclosed Trailer Coatings</a></li><li><a href="/commercial.html">Commercial Flooring</a></li></ul></div>
+      <div><div class="fc-t">Company</div><ul class="fl-links"><li><a href="/about.html">About Us</a></li><li><a href="/gallery.html">Project Gallery</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+      <div><div class="fc-t">Contact</div><ul class="fl-links" style="gap:14px"><li style="list-style:none;display:flex;align-items:center;gap:8px"><span style="color:var(--accent)">📞</span><a href="tel:8702776195" style="font-size:15px;font-weight:700;font-family:var(--font-c)">870-277-6195</a></li><li style="list-style:none;margin-top:8px"><a href="/contact.html" class="btn" style="background:var(--accent);color:var(--white);font-size:14px;padding:12px 20px;display:inline-block">Get Free Estimate</a></li></ul></div>
+    </div>
+    <div class="footer-bot"><span>© 2026 Twin Lakes Epoxy — All Rights Reserved</span><span>West Plains, MO · 870-277-6195</span><a href="/privacy.html">Privacy Policy</a></div>
+  </div>
+</footer>
+
+<div class="sticky-mob"><a href="tel:8702776195" class="s-call">📞 Call Now</a><a href="/contact.html" class="s-quote">Get Free Estimate</a></div>
+
+<script>
+  document.getElementById('hbtn').addEventListener('click',()=>document.getElementById('mmenu').classList.toggle('open'));
+</script>
+</body>
+</html>
