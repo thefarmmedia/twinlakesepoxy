@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Instant Price Calculator | Twin Lakes Epoxy | Mountain Home, AR | 870-277-6195</title>
-  <meta name="description" content="Get an instant ballpark price estimate for epoxy garage floors, countertops, and enclosed trailer coatings from Twin Lakes Epoxy in Mountain Home, AR."/>
+  <title>Instant Epoxy Flooring Price Calculator | Twin Lakes Epoxy | Mountain Home, AR</title>
+  <meta name="description" content="Get an instant ballpark price for your epoxy garage floor, countertop, trailer, or basement project in 60 seconds. Serving Mountain Home, AR and the Twin Lakes Area. Call 870-277-6195."/>
+  <meta property="og:title" content="Instant Epoxy Flooring Price Calculator | Twin Lakes Epoxy"/>
+  <meta property="og:description" content="Build your project in 60 seconds and unlock a real ballpark price range for epoxy flooring in Mountain Home, AR and the Twin Lakes Area."/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Epoxy Flooring Cost Calculator","provider":{"@type":"LocalBusiness","name":"Twin Lakes Epoxy","telephone":"870-277-6195","address":{"@type":"PostalAddress","addressLocality":"Mountain Home","addressRegion":"AR"}},"areaServed":"Twin Lakes Area, AR","description":"Free instant pricing calculator for epoxy garage floors, countertops, trailers, basements, and metallic floor coatings in Mountain Home, AR and the Twin Lakes Area."}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -37,34 +41,94 @@
     .breadcrumb a{color:var(--gray)}
     .breadcrumb a:hover{color:var(--accent)}
     .breadcrumb span{color:var(--gray-light);margin:0 8px}
-    .page-hero{min-height:32vh;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--bg2)}
-    .ph-inner{position:relative;z-index:1;max-width:1300px;margin:0 auto;width:100%;padding:50px 40px;text-align:center}
-    .ph-h1{font-family:var(--font-d);font-size:clamp(42px,6vw,76px);line-height:.93;margin-bottom:12px}
-    .ph-h1 .r{color:var(--accent)}
-    .ph-sub{font-family:var(--font-c);font-size:17px;font-weight:600;color:var(--gray-light);letter-spacing:.04em;text-transform:uppercase;max-width:640px;margin:0 auto}
-    .sec{padding:56px 40px 84px}
-    .inner{max-width:760px;margin:0 auto}
-    .calc-box{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:36px}
-    .fg{margin-bottom:18px}
-    .fg label{display:block;font-family:var(--font-c);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:6px}
-    .fg select,.fg input{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:5px;color:var(--white);font-family:var(--font-b);font-size:15px;padding:12px 14px;outline:none;-webkit-appearance:none}
-    .fg select:focus,.fg input:focus{border-color:var(--accent)}
-    .fg select option{background:var(--bg2)}
-    .range-row{display:flex;justify-content:space-between;font-family:var(--font-c);font-size:12px;color:var(--gray);margin-top:6px}
-    .result-box{margin-top:28px;background:var(--bg2);border:1px solid rgba(47,127,192,.4);border-radius:10px;padding:26px;text-align:center;display:none}
-    .result-box.show{display:block}
-    .result-label{font-family:var(--font-c);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
-    .result-price{font-family:var(--font-d);font-size:48px;color:var(--white);line-height:1}
-    .result-note{font-size:13px;color:var(--gray);margin-top:8px;font-family:var(--font-c)}
-    .btn{display:inline-block;font-family:var(--font-c);font-weight:900;letter-spacing:.1em;text-transform:uppercase;border-radius:5px;cursor:pointer;transition:all .2s;border:none}
-    .btn-red{background:var(--accent);color:var(--white);padding:15px 30px;font-size:15px;width:100%;margin-top:10px}
-    .btn-red:hover{background:var(--accent-dark)}
-    .btn-white{background:var(--white);color:var(--gold-dark);padding:14px 32px;font-size:15px;margin-top:16px}
-    .disclaimer{font-size:12px;color:var(--gray);text-align:center;margin-top:16px;font-family:var(--font-c)}
-    .cta-band{background:linear-gradient(135deg,var(--gold),var(--gold-dark));padding:52px 40px;text-align:center;position:relative;overflow:hidden;color:#1a1200;margin-top:20px}
+
+    /* CALCULATOR HERO */
+    .calc-hero{padding:52px 40px 0;background:linear-gradient(135deg,var(--bg2) 0%,#0d1420 60%,#0a1830 100%);text-align:center}
+    .calc-hero-label{font-family:var(--font-c);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+    .calc-hero h1{font-family:var(--font-d);font-size:clamp(38px,5.5vw,64px);line-height:.95;margin-bottom:14px}
+    .calc-hero h1 .r{color:var(--accent)}
+    .calc-hero p{font-family:var(--font-b);font-size:16px;color:var(--gray-light);max-width:580px;margin:0 auto;line-height:1.65}
+
+    /* CALCULATOR SECTION */
+    @keyframes calcGlow{0%,100%{box-shadow:0 0 30px var(--accent-glow),0 0 60px rgba(184,134,44,.08),inset 0 0 0 1px rgba(184,134,44,.3)}50%{box-shadow:0 0 50px rgba(184,134,44,.45),0 0 100px rgba(184,134,44,.16),inset 0 0 0 1px rgba(184,134,44,.55)}}
+    .calc-glow{animation:calcGlow 3s ease-in-out infinite}
+    #calculator{padding:56px 40px 88px;background:linear-gradient(135deg,var(--bg2) 0%,#0d1420 60%,#0a1830 100%);position:relative}
+    .calc-wrap{max-width:1080px;margin:0 auto;position:relative;z-index:1}
+    .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+    .calc-card{background:var(--bg3);border-radius:16px;padding:30px}
+    .calc-steps{display:flex;align-items:center;gap:10px;margin-bottom:24px}
+    .calc-step{flex:1;padding:10px 12px;border-radius:8px;font-family:var(--font-c);font-size:13px;font-weight:700;text-align:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.5);transition:all .3s}
+    .calc-step.on{background:var(--accent-glow);border-color:rgba(184,134,44,.45);color:var(--white)}
+    .calc-arrow{color:rgba(255,255,255,.3);font-weight:800;font-size:16px}
+    .calc-card h2{font-family:var(--font-c);font-size:21px;font-weight:900;text-transform:uppercase;letter-spacing:.03em;margin-bottom:5px}
+    .calc-card .sub{font-size:13px;color:var(--gray);margin-bottom:22px}
+    .cfrow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+    .cfg label{display:block;font-family:var(--font-c);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-light);margin-bottom:6px}
+    .cfg select,.cfg input{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:8px;color:var(--white);font-family:var(--font-b);font-size:15px;padding:12px 13px;outline:none;-webkit-appearance:none}
+    .cfg select:focus,.cfg input:focus{border-color:var(--accent)}
+    .cfg select option{background:var(--bg2)}
+    .cfg{margin-bottom:0}
+    .cfull{margin-bottom:20px}
+    /* live preview */
+    .calc-preview{margin-bottom:18px;padding:20px;border-radius:12px;background:linear-gradient(180deg,var(--accent-glow),rgba(184,134,44,.04));border:1px solid rgba(184,134,44,.35);position:relative;overflow:hidden}
+    .cp-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;font-family:var(--font-c)}
+    .cp-sub{font-size:12px;color:var(--gray);margin-bottom:4px}
+    .cp-range-wrap{position:relative;margin:6px 0 10px}
+    .cp-range{font-family:var(--font-d);font-size:42px;color:var(--white);line-height:1;filter:blur(7px);user-select:none}
+    .cp-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-c);font-size:13px;font-weight:700;color:var(--white);text-align:center;padding:0 10px}
+    .cp-status{padding:10px 12px;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:var(--gray-light);font-size:13px;font-weight:600}
+    .cp-note{margin-top:12px;padding:10px 12px;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);font-size:12px;color:var(--gray)}
+    .btn{display:inline-block;font-family:var(--font-c);font-weight:900;letter-spacing:.08em;text-transform:uppercase;border-radius:8px;cursor:pointer;transition:all .2s;border:none;text-align:center}
+    .btn-unlock{width:100%;background:var(--accent);color:var(--white);padding:15px 20px;font-size:15px;box-shadow:0 0 24px var(--accent-glow)}
+    .btn-unlock:hover{background:var(--accent-dark);box-shadow:0 0 36px rgba(184,134,44,.5)}
+    .btn-reset{width:100%;background:transparent;color:var(--white);border:1px solid var(--border);padding:12px 20px;font-size:13px;margin-top:10px}
+    .btn-reveal{width:100%;background:var(--accent);color:var(--white);padding:15px 20px;font-size:15px;box-shadow:0 0 24px var(--accent-glow)}
+    .btn-reveal:hover{box-shadow:0 0 36px rgba(184,134,44,.5)}
+    /* result */
+    #resultBox{display:none}
+    .result-inner{padding:24px;border-radius:12px;background:linear-gradient(180deg,var(--accent-glow),rgba(184,134,44,.04));border:1px solid rgba(184,134,44,.35)}
+    .result-label{font-size:12px;color:var(--gray);margin-bottom:6px;font-family:var(--font-c);text-transform:uppercase;letter-spacing:.08em}
+    .result-price{font-family:var(--font-d);font-size:46px;color:var(--white);line-height:1;margin-bottom:12px}
+    .result-text{font-size:14px;color:var(--gray-light);line-height:1.7;margin-bottom:18px}
+    .result-checks{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin-bottom:16px}
+    .result-checks div{font-size:13px;color:var(--gray-light)}
+    .result-fine{font-size:12px;color:var(--gray);margin:0}
+    .result-ctas{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+    .result-ctas a{flex:1;min-width:180px;padding:14px 20px;border-radius:8px;font-family:var(--font-c);font-weight:800;font-size:14px;text-align:center}
+    .rc-gold{background:var(--accent);color:var(--white)}
+    .rc-outline{border:1.5px solid var(--border);color:var(--white)}
+    /* why box */
+    .calc-why{background:var(--bg3);border-radius:16px;padding:26px}
+    .cw-label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-family:var(--font-c)}
+    .cw-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px}
+    .cw-item:last-child{margin-bottom:0}
+    .cw-ic{width:36px;height:36px;min-width:36px;border-radius:8px;background:var(--gold-glow);display:flex;align-items:center;justify-content:center;font-size:16px}
+    .cw-t{font-family:var(--font-c);font-size:14px;font-weight:700;color:var(--white);margin-bottom:3px}
+    .cw-d{font-size:13px;color:var(--gray);line-height:1.6}
+    @media(max-width:900px){.calc-grid{grid-template-columns:1fr}}
+    @media(max-width:600px){.cfrow{grid-template-columns:1fr}.result-checks{grid-template-columns:1fr}#calculator{padding:36px 18px 60px}.calc-hero{padding:40px 18px 0}}
+
+    /* FAQ (reused pattern) */
+    .sec{padding:70px 40px}
+    .inner{max-width:900px;margin:0 auto}
+    .sec-label{font-family:var(--font-c);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:9px;display:block;text-align:center}
+    .sec-title{font-family:var(--font-d);font-size:clamp(32px,4.5vw,50px);line-height:.95;margin-bottom:14px;text-align:center}
+    .faq-list{display:flex;flex-direction:column;gap:4px;margin-top:36px}
+    .fi{border:1px solid var(--border);border-radius:6px;overflow:hidden}
+    .fq{padding:16px 20px;font-family:var(--font-c);font-size:16px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--bg3);user-select:none}
+    .fq .arr{font-size:16px;color:var(--accent);transition:transform .3s;flex-shrink:0}
+    .fi.open .fq .arr{transform:rotate(180deg)}
+    .fa{max-height:0;overflow:hidden;transition:max-height .35s ease;background:var(--bg2)}
+    .fa-in{padding:0 20px;font-size:14px;color:var(--gray-light);line-height:1.7}
+    .fi.open .fa{max-height:280px}
+    .fi.open .fa-in{padding:16px 20px}
+
+    .cta-band{background:linear-gradient(135deg,var(--gold),var(--gold-dark));padding:52px 40px;text-align:center;position:relative;overflow:hidden;color:#08182b}
     .cta-band h2{font-family:var(--font-d);font-size:clamp(30px,4vw,48px);margin-bottom:10px}
     .cta-band p{font-family:var(--font-c);font-size:15px;font-weight:600;letter-spacing:.06em;opacity:.85;margin-bottom:20px;text-transform:uppercase}
+    .btn-white{background:var(--white);color:var(--gold-dark);padding:14px 32px;font-size:15px;margin-top:16px}
     .btn-blk{background:var(--black);color:var(--white);padding:13px 30px;font-size:15px;border:2px solid rgba(255,255,255,.25);margin-left:12px}
+
     footer{background:var(--black);border-top:2px solid var(--gold);padding:52px 40px 26px}
     .footer-in{max-width:1300px;margin:0 auto}
     .footer-top{display:grid;grid-template-columns:260px 1fr 1fr 1fr;gap:36px;margin-bottom:40px}
@@ -85,7 +149,7 @@
     .s-call{background:var(--accent);color:var(--white)}
     .s-quote{background:var(--bg3);color:var(--white);border:1px solid var(--border)}
     @media(max-width:1100px){.footer-top{grid-template-columns:1fr 1fr}}
-    @media(max-width:768px){nav{padding:0 18px}.nav-links{display:none}.hamburger{display:flex}.sec{padding:40px 18px 60px}.topbar{display:none}.sticky-mob{display:flex}body{padding-bottom:70px}.footer-top{grid-template-columns:1fr}.footer-bot{flex-direction:column;text-align:center}.breadcrumb{padding:10px 18px}}
+    @media(max-width:768px){nav{padding:0 18px}.nav-links{display:none}.hamburger{display:flex}.sec{padding:44px 18px}.topbar{display:none}.sticky-mob{display:flex}body{padding-bottom:70px}.footer-top{grid-template-columns:1fr}.footer-bot{flex-direction:column;text-align:center}.breadcrumb{padding:10px 18px}}
   </style>
 </head>
 <body>
@@ -102,7 +166,7 @@
     <li><a href="/about.html">About</a></li>
     <li><a href="/residential.html">Residential</a></li>
     <li><a href="/commercial.html">Commercial</a></li>
-    <li><a href="/gallery.html">Gallery</a></li><li><a href="/instant-quote.html" class="active">Instant Quote</a></li>
+    <li><a href="/gallery.html">Gallery</a></li><li><a href="/instant-quote.html" class="active" style="color:var(--accent)!important;font-weight:900!important">⚡ Instant Quote</a></li>
     <li><a href="/reviews.html">Reviews</a></li>
     <li><a href="/contact.html" class="nav-cta">Free Estimate</a></li>
   </ul>
@@ -115,49 +179,132 @@
 
 <div class="breadcrumb"><a href="/index.html">Home</a><span>›</span>Instant Price Calculator</div>
 
-<section class="page-hero">
-  <div class="ph-inner">
-    <h1 class="ph-h1">Instant Price <span class="r">Calculator</span></h1>
-    <p class="ph-sub">Get a ballpark estimate in seconds. Final pricing confirmed at your free on-site estimate.</p>
+<section class="calc-hero">
+  <div class="calc-hero-label">⚡ Free Online Tool</div>
+  <h1>Instant Epoxy <span class="r">Price Calculator</span></h1>
+  <p>Build your project in 60 seconds. We calculate a real price range based on your square footage, coating system, and concrete condition — then unlock your exact ballpark and schedule your free on-site quote.</p>
+</section>
+
+<section id="calculator">
+  <div class="calc-wrap">
+    <div class="calc-grid">
+      <!-- LEFT: Project Details -->
+      <div class="calc-card calc-glow" id="leftCard">
+        <div class="calc-steps">
+          <div class="calc-step on" id="stepIndicator1">Step 1: Project Details ✅</div>
+          <div class="calc-arrow">→</div>
+          <div class="calc-step" id="stepIndicator2">Step 2: Unlock Price 🔒</div>
+        </div>
+        <h2>Step 1: Enter Project Details</h2>
+        <p class="sub">Build your project so the calculator can start working immediately.</p>
+        <div class="cfrow">
+          <div class="cfg"><label>Project Type</label>
+            <select id="cProjectType">
+              <option>Garage Floor</option>
+              <option>Epoxy Countertops</option>
+              <option>Enclosed Trailer</option>
+              <option>Basement Floor</option>
+              <option>Patio / Outdoor</option>
+              <option>Commercial Floor</option>
+              <option>ManCave / Shop</option>
+              <option>Church or School</option>
+            </select>
+          </div>
+          <div class="cfg"><label>Square Footage</label>
+            <input id="cSqft" type="number" min="1" placeholder="e.g. 500"/>
+          </div>
+        </div>
+        <div class="cfrow">
+          <div class="cfg"><label>Coating System</label>
+            <select id="cSystem">
+              <option>Full Broadcast Flake</option>
+              <option>Solid Color</option>
+              <option>Metallic Epoxy</option>
+            </select>
+          </div>
+          <div class="cfg"><label>Concrete Condition</label>
+            <select id="cCondition">
+              <option>Good Condition</option>
+              <option>Average / Minor Repairs</option>
+              <option>Cracks / Pitting / More Prep</option>
+            </select>
+          </div>
+        </div>
+        <div class="cfull cfg">
+          <label>Project Layout</label>
+          <select id="cDifficulty">
+            <option>Standard Open Area</option>
+            <option>Some Edges / Obstacles</option>
+            <option>Tight / Detailed Layout (More Labor)</option>
+          </select>
+        </div>
+        <div class="calc-preview">
+          <div class="cp-label">🔒 Live Estimate Preview</div>
+          <div class="cp-sub">Your Estimated Price Range</div>
+          <div class="cp-range-wrap">
+            <div class="cp-range" id="cPreviewRange">$2,750 – $3,500</div>
+            <div class="cp-overlay" id="cPreviewOverlay">Enter square footage to start calculating…</div>
+          </div>
+          <div class="cp-status" id="cLiveStatus">Estimated Range: Calculating…</div>
+          <div class="cp-note">Enter your info to reveal your exact price range and available install dates.</div>
+        </div>
+        <button class="btn btn-unlock" onclick="cShowUnlock()">Unlock Your Exact Quote → Takes 10 Seconds</button>
+        <button class="btn btn-reset" onclick="cReset()">Reset Calculator</button>
+      </div>
+
+      <!-- RIGHT: Unlock + Result / Why -->
+      <div>
+        <div class="calc-card calc-glow" id="cUnlockCard" style="display:none;margin-bottom:20px">
+          <h2>Step 2: Unlock Your Price</h2>
+          <p class="sub">One step away. Enter your info to instantly reveal your ballpark quote.</p>
+          <div class="cfrow">
+            <div class="cfg"><label>Full Name</label><input id="cName" type="text" placeholder="John Smith"/></div>
+            <div class="cfg"><label>Phone Number</label><input id="cPhone" type="tel" placeholder="417-555-0000"/></div>
+          </div>
+          <div class="cfull cfg"><label>Your City / Zip</label><input id="cZip" type="text" placeholder="Mountain Home, AR or 72653"/></div>
+          <div class="cfull cfg"><label>Email Address</label><input id="cEmail" type="email" placeholder="you@email.com"/></div>
+          <button class="btn btn-reveal" id="cRevealBtn" onclick="cRevealPrice()">Reveal My Exact Ballpark Price</button>
+        </div>
+
+        <div class="calc-card calc-glow" id="resultBox" style="display:none">
+          <div class="result-inner">
+            <div class="result-label">Estimated Ballpark Investment</div>
+            <div class="result-price" id="cPriceRange">$0 – $0</div>
+            <div class="result-text" id="cResultText"></div>
+            <div class="result-checks">
+              <div>✔ Full mechanical diamond grinding</div>
+              <div>✔ Crack &amp; surface repairs as needed</div>
+              <div>✔ Professional coating system install</div>
+              <div>✔ 15-year written warranty</div>
+            </div>
+            <p class="result-fine">This is a ballpark estimate only. Final pricing confirmed after on-site measurement, slab evaluation, and finish selection.</p>
+          </div>
+          <div class="result-ctas">
+            <a href="/contact.html" class="rc-gold">Schedule My Free On-Site Quote →</a>
+            <a href="tel:8702776195" class="rc-outline">📞 870-277-6195</a>
+          </div>
+        </div>
+
+        <div class="calc-why" id="cWhyBox">
+          <div class="cw-label">Why Use This Calculator?</div>
+          <div class="cw-item"><div class="cw-ic">📐</div><div><div class="cw-t">Real starting point</div><div class="cw-d">Know a ballpark number before scheduling an on-site estimate.</div></div></div>
+          <div class="cw-item"><div class="cw-ic">💎</div><div><div class="cw-t">Prep included</div><div class="cw-d">Diamond grinding and crack repair are factored into every estimate.</div></div></div>
+          <div class="cw-item"><div class="cw-ic">📍</div><div><div class="cw-t">Built for the Twin Lakes Area</div><div class="cw-d">Pricing based on real Twin Lakes Epoxy projects in Mountain Home, Bull Shoals, Gassville &amp; the surrounding area.</div></div></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="sec">
   <div class="inner">
-    <div class="calc-box">
-      <div class="fg">
-        <label>Service Type</label>
-        <select id="service">
-          <option value="garage">Epoxy Garage Floor</option>
-          <option value="countertop">Epoxy Counter Tops</option>
-          <option value="trailer">Enclosed Trailer Coating</option>
-          <option value="basement">Basement Floor</option>
-          <option value="metallic">Metallic Epoxy Floor</option>
-          <option value="patio">Patio / Outdoor</option>
-          <option value="commercial">Commercial Floor</option>
-        </select>
-      </div>
-      <div class="fg">
-        <label>Approximate Square Footage: <span id="sqftLabel">500</span> sq ft</label>
-        <input type="range" id="sqft" min="100" max="5000" step="50" value="500"/>
-        <div class="range-row"><span>100 sq ft</span><span>5,000+ sq ft</span></div>
-      </div>
-      <div class="fg">
-        <label>Coating System</label>
-        <select id="system">
-          <option value="1.0">Solid Color (Standard)</option>
-          <option value="1.25" selected>Full Flake (Most Popular)</option>
-          <option value="1.6">Metallic Epoxy (Premium)</option>
-        </select>
-      </div>
-      <button class="btn btn-red" onclick="calculate()">Calculate My Estimate →</button>
-      <div class="result-box" id="result">
-        <div class="result-label">Estimated Price Range</div>
-        <div class="result-price" id="resultPrice">$0 – $0</div>
-        <div class="result-note">This is a ballpark estimate only. Actual pricing depends on surface condition, prep required, and site access — confirmed at your free on-site estimate.</div>
-        <a href="/contact.html" class="btn btn-red" style="margin-top:16px;display:inline-block;width:auto">Request My Exact Free Estimate →</a>
-      </div>
-      <p class="disclaimer">🔒 No obligation. This calculator provides a rough estimate for planning purposes only.</p>
+    <span class="sec-label">Common Questions</span>
+    <h2 class="sec-title">Calculator FAQ</h2>
+    <div class="faq-list" id="faqList">
+      <div class="fi"><div class="fq">How accurate is this calculator?<span class="arr">▾</span></div><div class="fa"><div class="fa-in">It gives a real ballpark range based on square footage, coating system, and general concrete condition. Final pricing is confirmed after a free on-site visit where we measure the space and evaluate the slab.</div></div></div>
+      <div class="fi"><div class="fq">Why do I need to unlock my exact price?<span class="arr">▾</span></div><div class="fa"><div class="fa-in">We ask for your contact info so we can follow up, answer any questions, and schedule your free on-site quote — pricing on epoxy floors depends on factors like concrete condition that are best confirmed in person.</div></div></div>
+      <div class="fi"><div class="fq">Do you offer free in-person quotes?<span class="arr">▾</span></div><div class="fa"><div class="fa-in">Yes. Every quote includes an on-site visit, measurement, slab evaluation, and physical color samples — completely free with no obligation.</div></div></div>
+      <div class="fi"><div class="fq">What's included in the price?<span class="arr">▾</span></div><div class="fa"><div class="fa-in">Every Twin Lakes Epoxy quote includes full mechanical diamond grinding, crack and surface repairs as needed, and a professional multi-step coating system installation with a polyaspartic topcoat.</div></div></div>
     </div>
   </div>
 </section>
@@ -181,26 +328,120 @@
   </div>
 </footer>
 
-<div class="sticky-mob"><a href="tel:8702776195" class="s-call">📞 Call Now</a><a href="/contact.html" class="s-quote">Get Free Estimate</a></div>
+<div class="sticky-mob"><a href="tel:8702776195" class="s-call">📞 Call Now</a><a href="#calculator" class="s-quote">Get Instant Price</a></div>
 
 <script>
   document.getElementById('hbtn').addEventListener('click',()=>document.getElementById('mmenu').classList.toggle('open'));
 
-  const baseRates={garage:5.5,countertop:65,trailer:6.5,basement:5,metallic:8,patio:6,commercial:4.5};
-  const sqftInput=document.getElementById('sqft');
-  const sqftLabel=document.getElementById('sqftLabel');
-  sqftInput.addEventListener('input',()=>{sqftLabel.textContent=sqftInput.value;});
+  // FAQ accordion
+  document.querySelectorAll('.fq').forEach(q=>{
+    q.addEventListener('click',()=>{
+      const item=q.closest('.fi');
+      const open=item.classList.contains('open');
+      document.querySelectorAll('.fi').forEach(i=>i.classList.remove('open'));
+      if(!open)item.classList.add('open');
+    });
+  });
 
-  function calculate(){
-    const service=document.getElementById('service').value;
-    const sqft=parseFloat(sqftInput.value);
-    const mult=parseFloat(document.getElementById('system').value);
-    const rate=baseRates[service]||5.5;
-    const low=Math.round(sqft*rate*mult*0.85/50)*50;
-    const high=Math.round(sqft*rate*mult*1.15/50)*50;
-    document.getElementById('resultPrice').textContent='$'+low.toLocaleString()+' – $'+high.toLocaleString();
-    document.getElementById('result').classList.add('show');
+  // ---- CALCULATOR ----
+  const baseRates={
+    'Garage Floor':{lo:5.00,hi:7.00},
+    'Epoxy Countertops':{lo:55.00,hi:75.00},
+    'Enclosed Trailer':{lo:6.00,hi:8.00},
+    'Basement Floor':{lo:4.50,hi:6.50},
+    'Patio / Outdoor':{lo:5.50,hi:7.50},
+    'Commercial Floor':{lo:4.00,hi:6.00},
+    'ManCave / Shop':{lo:5.00,hi:7.00},
+    'Church or School':{lo:4.00,hi:6.00}
+  };
+  function cFmt(v){return '$'+Number(v).toLocaleString();}
+  function cGetData(){
+    const sqft=parseFloat(document.getElementById('cSqft').value);
+    if(!sqft||sqft<=0)return null;
+    const projectType=document.getElementById('cProjectType').value;
+    const system=document.getElementById('cSystem').value;
+    const condition=document.getElementById('cCondition').value;
+    const difficulty=document.getElementById('cDifficulty').value;
+    const base=baseRates[projectType]||baseRates['Garage Floor'];
+    let lo=base.lo, hi=base.hi;
+    if(system==='Metallic Epoxy'){lo+=3.00;hi+=3.00;}
+    else if(system==='Solid Color'){lo=Math.max(1,lo-1.50);hi=Math.max(1,hi-1.50);}
+    if(condition==='Average / Minor Repairs'){lo+=.50;hi+=.50;}
+    else if(condition==='Cracks / Pitting / More Prep'){lo+=.75;hi+=.75;}
+    if(difficulty.startsWith('Tight')){lo+=1.0;hi+=1.0;}
+    else if(difficulty.startsWith('Some')){lo+=.50;hi+=.50;}
+    const lowTotal=Math.round(sqft*lo),highTotal=Math.round(sqft*hi);
+    return{projectType,sqft:String(sqft),system,condition,difficulty,
+      lowRate:lo.toFixed(2),highRate:hi.toFixed(2),lowTotal,highTotal,
+      estimatedRange:cFmt(lowTotal)+' – '+cFmt(highTotal)};
   }
+  function cUpdatePreview(){
+    const data=cGetData();
+    if(!data){
+      document.getElementById('cPreviewRange').textContent='$2,750 – $3,500';
+      document.getElementById('cPreviewOverlay').textContent='Enter square footage to start calculating…';
+      document.getElementById('cLiveStatus').textContent='Estimated Range: Calculating…';
+      return;
+    }
+    document.getElementById('cPreviewRange').textContent=data.estimatedRange;
+    document.getElementById('cPreviewOverlay').textContent='Locked — unlock below to reveal';
+    document.getElementById('cLiveStatus').textContent='Calculating based on '+Number(data.sqft).toLocaleString()+' sq ft…';
+  }
+  ['cProjectType','cSqft','cSystem','cCondition','cDifficulty'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){el.addEventListener('input',cUpdatePreview);el.addEventListener('change',cUpdatePreview);}
+  });
+  function cShowUnlock(){
+    const data=cGetData();
+    if(!data){alert('Please enter the approximate square footage.');return;}
+    document.getElementById('cUnlockCard').style.display='block';
+    document.getElementById('cWhyBox').style.display='none';
+    document.getElementById('stepIndicator2').classList.add('on');
+    document.getElementById('cUnlockCard').scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  function cRevealPrice(){
+    const data=cGetData();
+    if(!data){alert('Please complete your project details first.');return;}
+    const name=document.getElementById('cName').value.trim();
+    const phone=document.getElementById('cPhone').value.trim();
+    const email=document.getElementById('cEmail').value.trim();
+    const zip=document.getElementById('cZip').value.trim();
+    if(!name||!phone||!email||!zip){alert('Please complete all contact fields.');return;}
+    const btn=document.getElementById('cRevealBtn');
+    btn.disabled=true;btn.textContent='Revealing Price...';
+    document.getElementById('cPriceRange').textContent=data.estimatedRange;
+    document.getElementById('cResultText').innerHTML='Based on <strong>'+Number(data.sqft).toLocaleString()+' sq ft</strong>, your selected system, and concrete condition, your project falls in the range above. The next step is a free on-site visit to confirm measurements and evaluate the slab.';
+    document.getElementById('cUnlockCard').style.display='none';
+    document.getElementById('resultBox').classList.add('show');
+    document.getElementById('resultBox').style.display='block';
+    document.getElementById('resultBox').scrollIntoView({behavior:'smooth',block:'nearest'});
+    btn.disabled=false;btn.textContent='Reveal My Exact Ballpark Price';
+  }
+  function cReset(){
+    ['cProjectType','cSystem','cCondition','cDifficulty'].forEach(id=>{const el=document.getElementById(id);if(el)el.selectedIndex=0;});
+    document.getElementById('cSqft').value='';
+    document.getElementById('cName').value='';
+    document.getElementById('cPhone').value='';
+    document.getElementById('cEmail').value='';
+    document.getElementById('cZip').value='';
+    document.getElementById('cUnlockCard').style.display='none';
+    document.getElementById('resultBox').style.display='none';
+    document.getElementById('cWhyBox').style.display='block';
+    document.getElementById('stepIndicator2').classList.remove('on');
+    cUpdatePreview();
+  }
+  // Prefill from homepage teaser handoff
+  (function(){
+    const params=new URLSearchParams(window.location.search);
+    const type=params.get('type');
+    const sqft=params.get('sqft');
+    if(type){
+      const sel=document.getElementById('cProjectType');
+      for(const opt of sel.options){if(opt.value===type){sel.value=type;break;}}
+    }
+    if(sqft)document.getElementById('cSqft').value=sqft;
+  })();
+  cUpdatePreview();
 </script>
 </body>
 </html>
