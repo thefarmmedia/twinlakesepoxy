@@ -70,10 +70,10 @@
     @keyframes logoFloatIn{0%{opacity:0;transform:translateY(-55px) rotate(-4deg)}55%{opacity:1;transform:translateY(10px) rotate(2deg)}75%{transform:translateY(-5px) rotate(-1deg)}100%{opacity:1;transform:translateY(0) rotate(0)}}
     @keyframes logoBob{0%,100%{transform:translateY(0) rotate(-1.2deg)}50%{transform:translateY(-11px) rotate(1.2deg)}}
     /* WATER RIPPLES */
-    .ripple{position:absolute;top:50%;left:50%;width:220px;height:220px;border-radius:50%;border:2px solid rgba(58,141,208,.55);transform:translate(-50%,-50%) scale(1);opacity:0;z-index:1;animation:rippleOut 3.6s ease-out infinite}
+    .ripple{position:absolute;bottom:14px;left:50%;width:176px;height:34px;border-radius:50%;border:1.5px solid rgba(140,195,240,.6);box-shadow:0 0 10px rgba(120,180,230,.2);transform:translateX(-50%) scale(.4,.3);opacity:0;z-index:1;filter:blur(.4px);animation:rippleOut 3.6s ease-out infinite}
     .ripple.r2{animation-delay:1.2s}
     .ripple.r3{animation-delay:2.4s}
-    @keyframes rippleOut{0%{transform:translate(-50%,-50%) scale(.85);opacity:.65}100%{transform:translate(-50%,-50%) scale(1.55);opacity:0}}
+    @keyframes rippleOut{0%{transform:translateX(-50%) scale(.4,.3);opacity:.6}70%{opacity:.25}100%{transform:translateX(-50%) scale(2.1,1.5);opacity:0}}
     /* WATER REFLECTION */
     .hero-logo-reflection{position:absolute;top:100%;left:0;width:220px;height:120px;overflow:hidden;z-index:2;pointer-events:none;margin-top:-4px;-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.4),transparent 85%);mask-image:linear-gradient(to bottom,rgba(0,0,0,.4),transparent 85%);animation:logoBob 4.5s ease-in-out 1.4s infinite}
     .hero-logo-reflection img{width:220px;height:220px;object-fit:contain;transform:scaleY(-1);filter:blur(1.5px)}
@@ -352,7 +352,7 @@
       .ps-content{padding:36px 22px}
       .hero-logo{width:150px;height:150px;margin-bottom:30px}
       .hero-logo img{width:150px;height:150px}
-      .ripple{width:150px;height:150px}
+      .ripple{width:120px;height:24px;bottom:10px}
       .hero-logo-reflection{width:150px;height:82px}
       .hero-logo-reflection img{width:150px;height:150px}
     }
