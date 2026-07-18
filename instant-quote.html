@@ -356,7 +356,7 @@
 
   // ---- CALCULATOR ----
   const baseRates={
-    'Garage Floor':{lo:5.00,hi:7.00},
+    'Garage Floor':{lo:5.50,hi:7.00},
     'Epoxy Countertops':{lo:55.00,hi:75.00},
     'Enclosed Trailer':{lo:6.00,hi:8.00},
     'Basement Floor':{lo:4.50,hi:6.50},
@@ -420,6 +420,21 @@
     if(!name||!phone||!email||!zip){alert('Please complete all contact fields.');return;}
     const btn=document.getElementById('cRevealBtn');
     btn.disabled=true;btn.textContent='Revealing Price...';
+    try{
+      fetch('https://services.leadconnectorhq.com/hooks/Z7zUXBflTTc6TGnrvObU/webhook-trigger/2c42ca0b-1ba9-4eae-a006-4744b65a4faf',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          name:name,phone:phone,email:email,zip:zip,
+          project_type:data.projectType,square_footage:data.sqft,
+          coating_system:data.system,concrete_condition:data.condition,
+          project_layout:data.difficulty,
+          estimated_low:data.lowTotal,estimated_high:data.highTotal,
+          estimated_range:data.estimatedRange,
+          source:'Instant Quote Calculator - twinlakesepoxy.com'
+        })
+      }).catch(function(){});
+    }catch(e){}
     document.getElementById('cPriceRange').textContent=data.estimatedRange;
     document.getElementById('cResultText').innerHTML='Based on <strong>'+Number(data.sqft).toLocaleString()+' sq ft</strong>, your selected system, and concrete condition, your project falls in the range above. The next step is a free on-site visit to confirm measurements and evaluate the slab.';
     document.getElementById('cUnlockCard').style.display='none';
