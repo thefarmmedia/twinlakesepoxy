@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sell Your Comic Collection | Free Appraisals | Another Comic Shop — Springfield, MO</title>
+  <meta name="description" content="Sell comics, action figures, Funko Pop & collectibles in Springfield, MO. Another Comic Shop offers free appraisals, fair cash offers, and same-day decisions. We come to you for large collections."/>
+  <!-- LOCAL SEO: Also targets "sell comic books springfield mo", "comic book appraisal springfield mo", "sell funko pop springfield mo" -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--y:#FFE000;--yd:#C9B000;--r:#D4141A;--rd:#A30F14;--b:#1565C0;--bg:#080808;--bg2:#101010;--bg3:#181818;--bg4:#222;--border:rgba(255,255,255,.08);--gray:#888;--gl:#bbb;--white:#fff;--fd:'Bangers',cursive;--fc:'Barlow Condensed',sans-serif;--fb:'Barlow',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--white);font-family:var(--fb);overflow-x:hidden;line-height:1.6}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+
+    .topbar{background:var(--r);padding:7px 32px;display:flex;justify-content:space-between;align-items:center;font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;flex-wrap:wrap;gap:8px;z-index:200;position:relative}
+    .topbar-l{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+    .t-social{width:26px;height:26px;background:rgba(0,0,0,.3);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;transition:background .2s}
+    .t-social:hover{background:rgba(0,0,0,.5)}
+    nav{background:var(--bg);border-bottom:3px solid var(--y);padding:0 32px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:999;height:70px}
+    .nav-logo-text{font-family:var(--fd);font-size:26px;letter-spacing:.04em;color:var(--y);text-shadow:2px 2px 0 var(--r);line-height:1}
+    .nav-logo-sub{font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);display:block;margin-top:-1px}
+    .nav-links{display:flex;gap:4px;list-style:none;font-family:var(--fc);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;align-items:center}
+    .nav-links a{color:var(--gl);transition:color .2s;padding:6px 10px;border-radius:3px}
+    .nav-links a:hover,.nav-links a.active{color:var(--y)}
+    .nav-cta{background:var(--y)!important;color:var(--bg)!important;padding:9px 18px!important;border-radius:4px!important;font-weight:900!important;transition:background .2s,transform .15s!important}
+    .nav-cta:hover{background:var(--yd)!important;transform:translateY(-1px)!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px}
+    .mob-menu{display:none;flex-direction:column;background:var(--bg);border-top:2px solid var(--y);padding:16px 24px;gap:0;font-family:var(--fc);font-size:17px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;position:relative;z-index:998}
+    .mob-menu a{color:var(--gl);padding:12px 0;border-bottom:1px solid var(--border);display:block}
+    .mob-menu a:last-child{color:var(--y);border-bottom:none}
+    .mob-menu.open{display:flex}
+
+    /* HERO */
+    .page-hero{background:var(--r);padding:72px 0 60px;position:relative;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.3) 0%,transparent 60%)}
+    .page-hero::after{content:'$$$';position:absolute;font-family:var(--fd);font-size:clamp(180px,28vw,400px);color:rgba(0,0,0,.12);top:50%;right:-3%;transform:translateY(-50%);line-height:1;pointer-events:none}
+    .page-hero-inner{max-width:1300px;margin:0 auto;padding:0 40px;position:relative;z-index:1;display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center}
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:18px}
+    .breadcrumb a{color:rgba(255,255,255,.6);transition:color .2s}
+    .breadcrumb a:hover{color:var(--white)}
+    .breadcrumb span{opacity:.4}
+    .page-eyebrow{font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:10px}
+    .page-h{font-family:var(--fd);font-size:clamp(52px,9vw,110px);line-height:.88;letter-spacing:.02em;margin-bottom:18px}
+    .page-sub{font-family:var(--fc);font-size:clamp(15px,2vw,19px);font-weight:600;color:rgba(255,255,255,.88);max-width:580px;line-height:1.55;letter-spacing:.03em;margin-bottom:28px}
+    .hero-badges{display:flex;gap:10px;flex-wrap:wrap}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.2);border-radius:3px;padding:7px 14px;font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .hero-stat-panel{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:28px 32px;text-align:center;flex-shrink:0}
+    .hsp-n{font-family:var(--fd);font-size:58px;line-height:1;letter-spacing:.02em;color:var(--y)}
+    .hsp-l{font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.8;margin-top:3px}
+    .hsp-div{border-top:1px solid rgba(255,255,255,.15);margin:18px 0;padding-top:18px}
+
+    /* UTILS */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 28px;border-radius:4px;font-family:var(--fc);font-size:16px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+    .btn-y{background:var(--y);color:var(--bg)}
+    .btn-y:hover{background:var(--yd);transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,224,0,.3)}
+    .btn-r{background:var(--r);color:var(--white)}
+    .btn-r:hover{background:var(--rd);transform:translateY(-2px)}
+    .btn-dark{background:var(--bg3);color:var(--white);border:1px solid var(--border)}
+    .btn-dark:hover{border-color:var(--y);color:var(--y)}
+    .btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.25)}
+    .btn-outline:hover{border-color:var(--y);color:var(--y)}
+    .btn-full{width:100%}
+    .btn-lg{padding:17px 34px;font-size:17px}
+    .wrap{max-width:1300px;margin:0 auto;padding:0 40px}
+    section{padding:72px 0}
+    .stripe{height:4px;background:linear-gradient(90deg,var(--y) 0%,var(--r) 50%,var(--b) 100%)}
+    .eyebrow{font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--y);margin-bottom:10px}
+    .sec-h{font-family:var(--fd);font-size:clamp(38px,5vw,70px);letter-spacing:.03em;line-height:.92;margin-bottom:16px}
+    .text-y{color:var(--y)}
+
+    /* WHAT WE BUY */
+    .what{background:var(--bg2)}
+    .what-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+    .wcard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:24px 20px;transition:border-color .2s,transform .2s}
+    .wcard:hover{border-color:var(--y);transform:translateY(-2px)}
+    .wcard-icon{font-size:28px;margin-bottom:12px}
+    .wcard-h{font-family:var(--fd);font-size:20px;letter-spacing:.04em;margin-bottom:6px}
+    .wcard-p{font-size:13px;color:var(--gray);line-height:1.6;margin-bottom:12px}
+    .wcard-tags{display:flex;flex-wrap:wrap;gap:5px}
+    .tag{font-family:var(--fc);font-size:11px;font-weight:700;padding:3px 8px;background:var(--bg4);border-radius:3px;color:var(--gl);letter-spacing:.04em;text-transform:uppercase}
+
+    /* HOW IT WORKS */
+    .how{background:var(--bg)}
+    .how-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:44px}
+    .hstep{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:22px 18px;position:relative;overflow:hidden;text-align:center}
+    .hstep::before{content:attr(data-n);position:absolute;font-family:var(--fd);font-size:80px;color:rgba(255,224,0,.04);top:-8px;left:-4px;line-height:1;pointer-events:none}
+    .hstep-n{width:40px;height:40px;background:var(--y);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:20px;color:var(--bg);margin:0 auto 14px;position:relative;z-index:1}
+    .hstep-h{font-family:var(--fd);font-size:17px;letter-spacing:.04em;margin-bottom:7px;position:relative;z-index:1}
+    .hstep-p{font-size:13px;color:var(--gl);line-height:1.6;position:relative;z-index:1}
+
+    /* MAIN FORM SECTION */
+    .form-section{background:var(--bg2)}
+    .form-layout{display:grid;grid-template-columns:1fr 420px;gap:56px;align-items:start}
+    .form-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:38px;position:sticky;top:88px}
+    .form-card-title{font-family:var(--fd);font-size:26px;letter-spacing:.04em;color:var(--y);margin-bottom:6px}
+    .form-card-sub{font-size:14px;color:var(--gl);margin-bottom:28px}
+    .fsec{margin-bottom:26px}
+    .fsec-title{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--r);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+    .frow{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:13px}
+    .frow.full{grid-template-columns:1fr}
+    .ff{display:flex;flex-direction:column;gap:5px}
+    .ff label{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gl)}
+    .ff input,.ff select,.ff textarea{background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:11px 14px;color:var(--white);font-family:var(--fb);font-size:14px;outline:none;transition:border-color .2s;width:100%}
+    .ff input:focus,.ff select:focus,.ff textarea:focus{border-color:var(--y)}
+    .ff select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath fill='%23888' d='M5 7L0 0h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+    .ff select option{background:var(--bg4)}
+    .ff textarea{resize:vertical;min-height:80px}
+
+    /* TYPE SELECTOR */
+    .type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:4px}
+    .type-check{display:none}
+    .type-label{display:flex;flex-direction:column;align-items:center;gap:5px;padding:12px 8px;background:var(--bg4);border:1px solid var(--border);border-radius:6px;cursor:pointer;transition:all .2s;text-align:center}
+    .type-label-icon{font-size:22px}
+    .type-label-text{font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gl)}
+    .type-check:checked+.type-label{background:rgba(212,20,26,.15);border-color:var(--r)}
+    .type-check:checked+.type-label .type-label-text{color:var(--white)}
+    .type-label:hover{border-color:var(--gl)}
+
+    /* UPLOAD BOX */
+    .upload-box{border:2px dashed var(--border);border-radius:6px;padding:24px;text-align:center;transition:border-color .2s;cursor:pointer;margin-bottom:13px}
+    .upload-box:hover{border-color:var(--y)}
+    .upload-icon{font-size:28px;margin-bottom:8px}
+    .upload-text{font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gl);margin-bottom:4px}
+    .upload-hint{font-size:12px;color:var(--gray)}
+
+    /* INFO SIDE */
+    .sell-info{display:flex;flex-direction:column;gap:22px}
+    .info-block{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:26px}
+    .info-block-h{font-family:var(--fd);font-size:20px;letter-spacing:.04em;color:var(--y);margin-bottom:8px}
+    .info-block-p{font-size:15px;color:var(--gl);line-height:1.7}
+    .promise-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-top:14px}
+    .promise-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--gl);line-height:1.55}
+    .promise-list li::before{content:'✓';display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:rgba(255,224,0,.1);border:1px solid rgba(255,224,0,.3);border-radius:50%;font-size:12px;font-weight:900;color:var(--y);flex-shrink:0;margin-top:1px}
+    .quote-box{background:rgba(255,224,0,.07);border:1px solid rgba(255,224,0,.2);border-radius:6px;padding:20px}
+    .quote-box-q{font-style:italic;font-size:15px;color:var(--gl);line-height:1.65;margin-bottom:10px}
+    .quote-box-attr{font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray)}
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .srow-item{background:var(--bg4);border-radius:6px;padding:14px;text-align:center}
+    .srow-n{font-family:var(--fd);font-size:28px;color:var(--y);line-height:1}
+    .srow-l{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-top:2px}
+
+    /* WHY JEFF */
+    .why{background:var(--bg)}
+    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .why-visual{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:44px;position:relative;overflow:hidden;text-align:center}
+    .why-visual::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,224,0,.055) 1.5px,transparent 1.5px);background-size:22px 22px}
+    .why-big{font-family:var(--fd);font-size:clamp(50px,7vw,90px);line-height:.9;letter-spacing:.02em;position:relative;z-index:1}
+    .why-big span{display:block}
+    .wy{color:var(--y)}.wr{color:var(--r)}
+    .why-sub{font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-top:14px;position:relative;z-index:1}
+    .why-quote{font-family:var(--fd);font-size:clamp(22px,3vw,36px);letter-spacing:.02em;line-height:1.08;color:var(--y);margin-bottom:20px}
+    .why-p{font-size:16px;color:var(--gl);line-height:1.8;margin-bottom:18px}
+
+    /* LOCAL SEO SECTION */
+    .local{background:var(--bg2)}
+    .local-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:44px}
+    .local-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:26px;transition:border-color .2s}
+    .local-card:hover{border-color:var(--y)}
+    .local-card-h{font-family:var(--fd);font-size:18px;letter-spacing:.04em;color:var(--y);margin-bottom:8px}
+    .local-card-p{font-size:14px;color:var(--gl);line-height:1.65}
+
+    /* FOOTER */
+    footer{background:var(--bg);border-top:3px solid var(--y);padding:50px 0 26px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px}
+    .footer-brand{font-family:var(--fd);font-size:26px;letter-spacing:.04em;color:var(--y);text-shadow:2px 2px 0 var(--r);margin-bottom:10px}
+    .footer-tagline{font-size:14px;color:var(--gray);line-height:1.75;margin-bottom:16px;max-width:260px}
+    .footer-socials{display:flex;gap:8px}
+    .fsoc{width:34px;height:34px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:var(--fc);font-size:12px;font-weight:900;transition:all .2s}
+    .fsoc:hover{background:var(--y);color:var(--bg);border-color:var(--y)}
+    .footer-col-title{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--y);margin-bottom:14px}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .footer-links a{font-size:14px;color:var(--gray);transition:color .2s}
+    .footer-links a:hover{color:var(--white)}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--gray)}
+    .footer-bottom a{color:var(--gray);transition:color .2s}
+    .footer-bottom a:hover{color:var(--y)}
+
+    @media(max-width:1000px){
+      .page-hero-inner{grid-template-columns:1fr}
+      .hero-stat-panel{display:none}
+      .form-layout{grid-template-columns:1fr}
+      .form-card{position:static}
+      .what-grid{grid-template-columns:1fr 1fr}
+      .how-steps{grid-template-columns:repeat(3,1fr)}
+      .why-grid{grid-template-columns:1fr}
+      .local-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+    }
+    @media(max-width:640px){
+      .wrap,.page-hero-inner{padding:0 20px}
+      nav{padding:0 16px}
+      .nav-links{display:none}
+      .hamburger{display:flex}
+      .topbar{padding:6px 16px;font-size:11px}
+      .what-grid,.how-steps{grid-template-columns:1fr}
+      .frow{grid-template-columns:1fr}
+      .type-grid{grid-template-columns:repeat(2,1fr)}
+      .stat-row{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+      section{padding:52px 0}
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-l">
+    <span>📍 Springfield, MO</span>
+    <a href="tel:+14175550000">📞 (417) 555-0000</a>
+    <span>Mon–Sat 10am–6pm · Sun Noon–5pm</span>
+  </div>
+  <div class="topbar-r" style="display:flex;gap:8px">
+    <a href="#" class="t-social">f</a>
+    <a href="#" class="t-social">ig</a>
+    <a href="#" class="t-social">tt</a>
+  </div>
+</div>
+
+<nav>
+  <a href="acs-index.html">
+    <div class="nav-logo-text">ANOTHER COMIC SHOP</div>
+    <span class="nav-logo-sub">Springfield, Missouri</span>
+  </a>
+  <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.mob-menu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="acs-shop.html">Shop</a></li>
+    <li><a href="acs-hunt.html">Hunt a Comic</a></li>
+    <li><a href="acs-index.html#characters">Characters</a></li>
+    <li><a href="acs-sell.html" class="active">Sell / Trade</a></li>
+    <li><a href="acs-index.html#visit">Visit Us</a></li>
+    <li><a href="acs-index.html#about">About</a></li>
+    <li><a href="acs-sell.html" class="nav-cta">Free Appraisal</a></li>
+  </ul>
+</nav>
+<div class="mob-menu">
+  <a href="acs-shop.html">Shop</a>
+  <a href="acs-hunt.html">Hunt a Comic</a>
+  <a href="acs-sell.html">Sell / Trade</a>
+  <a href="acs-index.html#visit">Visit Us</a>
+  <a href="acs-index.html#about">About</a>
+  <a href="acs-sell.html">Free Appraisal →</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <div class="breadcrumb">
+        <a href="acs-index.html">Home</a>
+        <span>›</span>
+        <span style="color:rgba(255,255,255,.8)">Sell Your Collection</span>
+      </div>
+      <div class="page-eyebrow">Free Appraisals · Fair Cash Offers · Springfield, MO</div>
+      <h1 class="page-h">SELL YOUR<br>COLLECTION.</h1>
+      <p class="page-sub">Comics. Figures. Funko. Toys. Entire rooms. Jeff's bought them all — and he pays fair. Get a free appraisal with zero obligation. We come to you for large collections.</p>
+      <div class="hero-badges">
+        <span class="hero-badge">✓ Free Appraisal</span>
+        <span class="hero-badge">✓ Same-Day Offers</span>
+        <span class="hero-badge">✓ We Come to You</span>
+        <span class="hero-badge">✓ Cash or Trade Credit</span>
+      </div>
+    </div>
+    <div class="hero-stat-panel">
+      <div class="hsp-n">500+</div>
+      <div class="hsp-l">Collections Purchased</div>
+      <div class="hsp-div">
+        <div class="hsp-n" style="font-size:42px">Same Day</div>
+        <div class="hsp-l">Offers on Walk-Ins</div>
+      </div>
+      <div class="hsp-div">
+        <div class="hsp-n" style="font-size:42px">Free</div>
+        <div class="hsp-l">Always. No Exceptions.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stripe"></div>
+
+<!-- WHAT WE BUY -->
+<section class="what">
+  <div class="wrap">
+    <div class="eyebrow">We Buy It All</div>
+    <h2 class="sec-h">WHAT WE <span class="text-y">BUY</span></h2>
+    <div class="what-grid">
+      <div class="wcard">
+        <div class="wcard-icon">📚</div>
+        <div class="wcard-h">Comic Books</div>
+        <p class="wcard-p">Raw and graded, any era. Single issues to full long-box collections.</p>
+        <div class="wcard-tags">
+          <span class="tag">Golden Age</span><span class="tag">Silver Age</span><span class="tag">Bronze Age</span>
+          <span class="tag">Copper Age</span><span class="tag">Modern</span><span class="tag">Keys & 1st Apps</span>
+        </div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-icon">💎</div>
+        <div class="wcard-h">Graded Comics</div>
+        <p class="wcard-p">CGC, CBCS, PGXF slabs in any grade. We understand graded book pricing.</p>
+        <div class="wcard-tags">
+          <span class="tag">CGC</span><span class="tag">CBCS</span><span class="tag">Any Grade</span><span class="tag">Signed Slabs</span>
+        </div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-icon">🤖</div>
+        <div class="wcard-h">Action Figures</div>
+        <p class="wcard-p">Vintage and modern. Loose, carded, or complete sets.</p>
+        <div class="wcard-tags">
+          <span class="tag">Marvel Legends</span><span class="tag">DC Direct</span><span class="tag">MOTU</span><span class="tag">TMNT</span><span class="tag">Star Wars</span>
+        </div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-icon">🎯</div>
+        <div class="wcard-h">Funko Pop</div>
+        <p class="wcard-p">Vaulted, exclusives, chase variants — individual pieces or full collections.</p>
+        <div class="wcard-tags">
+          <span class="tag">Vaulted</span><span class="tag">Exclusives</span><span class="tag">Chase</span><span class="tag">Grail Pops</span>
+        </div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-icon">🎮</div>
+        <div class="wcard-h">Toys & Collectibles</div>
+        <p class="wcard-p">Vintage toys, statues, busts, prop replicas, apparel, memorabilia.</p>
+        <div class="wcard-tags">
+          <span class="tag">Vintage Toys</span><span class="tag">Statues</span><span class="tag">Busts</span><span class="tag">Memorabilia</span>
+        </div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-icon">📦</div>
+        <div class="wcard-h">Entire Collections</div>
+        <p class="wcard-p">Basement rooms, storage units, estate collections. The bigger the better — we come to you.</p>
+        <div class="wcard-tags">
+          <span class="tag">Estate Sales</span><span class="tag">Storage Units</span><span class="tag">Bulk Collections</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="eyebrow">Simple. Fast. Fair.</div>
+    <h2 class="sec-h">HOW IT <span class="text-y">WORKS</span></h2>
+    <div class="how-steps">
+      <div class="hstep" data-n="1">
+        <div class="hstep-n">1</div>
+        <div class="hstep-h">Submit the Form</div>
+        <p class="hstep-p">Tell us what you have — type, quantity, era, condition, and any key issues you know about. Upload a few photos if you can.</p>
+      </div>
+      <div class="hstep" data-n="2">
+        <div class="hstep-n">2</div>
+        <div class="hstep-h">Jeff Reviews</div>
+        <p class="hstep-p">Jeff personally reviews every submission. He'll reach out within 24 hours with questions or to schedule a look.</p>
+      </div>
+      <div class="hstep" data-n="3">
+        <div class="hstep-n">3</div>
+        <div class="hstep-h">We Appraise</div>
+        <p class="hstep-p">Bring it to the shop or — for large collections — we come to you. Free appraisal, no pressure, no obligation.</p>
+      </div>
+      <div class="hstep" data-n="4">
+        <div class="hstep-n">4</div>
+        <div class="hstep-h">You Get an Offer</div>
+        <p class="hstep-p">Fair, transparent cash offer on the spot. We explain our reasoning and are happy to talk through it with you.</p>
+      </div>
+      <div class="hstep" data-n="5">
+        <div class="hstep-n">5</div>
+        <div class="hstep-h">Walk Out Paid</div>
+        <p class="hstep-p">Accept the offer — cash or store credit (we'll do better on trade). No waiting. Same-day payment on walk-ins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<!-- FORM + INFO -->
+<section class="form-section">
+  <div class="wrap">
+    <div class="form-layout">
+      <!-- INFO SIDE -->
+      <div class="sell-info">
+        <div class="eyebrow">Why Sell to Another Comic Shop?</div>
+        <h2 style="font-family:var(--fd);font-size:clamp(34px,4.5vw,60px);letter-spacing:.03em;line-height:.92;margin-bottom:24px">WE ACTUALLY <span class="text-y">WANT</span> YOUR COLLECTION</h2>
+
+        <div class="stat-row">
+          <div class="srow-item"><div class="srow-n">500+</div><div class="srow-l">Collections Bought</div></div>
+          <div class="srow-item"><div class="srow-n">Same Day</div><div class="srow-l">Offers on Walk-Ins</div></div>
+          <div class="srow-item"><div class="srow-n">Free</div><div class="srow-l">Always Free</div></div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-block-h">Our Promise to You</div>
+          <ul class="promise-list">
+            <li>Free appraisal — always, no exceptions, no obligation</li>
+            <li>Fair, transparent offer with reasoning you can understand</li>
+            <li>Cash on the spot or store trade credit (we pay more on trade)</li>
+            <li>We come to you for large collections — no hauling required</li>
+            <li>We treat your collection with respect — we're collectors too</li>
+            <li>No low-ball pressure tactics, no bait-and-switch</li>
+          </ul>
+        </div>
+
+        <div class="quote-box">
+          <p class="quote-box-q">"I asked on the Springfield subreddit where to sell my Funko collection. Another Comic Shop was immediately recommended. Jeff made a fair offer the same day I walked in."</p>
+          <div class="quote-box-attr">— Springfield Resident</div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-block-h">📦 Have a Big Collection?</div>
+          <p class="info-block-p">Basement full of long boxes? Storage unit? Entire room? We've done it all. Jeff and the team will come to you — evaluate everything on-site and make you a single offer on the whole lot. No need to sort, bag, or catalog anything.</p>
+          <div style="margin-top:16px">
+            <a href="tel:+14175550000" class="btn btn-y" style="font-size:14px;padding:10px 22px">📞 Call About a Large Collection</a>
+          </div>
+        </div>
+
+        <div class="info-block" style="border-color:rgba(255,224,0,.15)">
+          <div class="info-block-h" style="color:var(--white)">Prefer to walk in?</div>
+          <p class="info-block-p">No form required. Bring your comics to the shop any time we're open. Jeff or a team member will look them over and make you an offer on the spot.</p>
+          <div style="margin-top:8px;font-size:14px;color:var(--gray)">Mon–Sat 10am–6pm · Sun Noon–5pm · Springfield, MO</div>
+        </div>
+      </div>
+
+      <!-- FORM CARD -->
+      <div class="form-card">
+        <div class="form-card-title">💰 Get a Free Appraisal</div>
+        <div class="form-card-sub">Submit your collection info. Jeff personally reviews every submission.</div>
+
+        <div class="fsec">
+          <div class="fsec-title">What Are You Selling?</div>
+          <div style="margin-bottom:13px">
+            <div class="ff" style="margin-bottom:8px">
+              <label>Select all that apply</label>
+            </div>
+            <div class="type-grid">
+              <div>
+                <input type="checkbox" id="t-comics" class="type-check"/>
+                <label for="t-comics" class="type-label">
+                  <span class="type-label-icon">📚</span>
+                  <span class="type-label-text">Comics</span>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="t-graded" class="type-check"/>
+                <label for="t-graded" class="type-label">
+                  <span class="type-label-icon">💎</span>
+                  <span class="type-label-text">Graded</span>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="t-figures" class="type-check"/>
+                <label for="t-figures" class="type-label">
+                  <span class="type-label-icon">🤖</span>
+                  <span class="type-label-text">Figures</span>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="t-funko" class="type-check"/>
+                <label for="t-funko" class="type-label">
+                  <span class="type-label-icon">🎯</span>
+                  <span class="type-label-text">Funko</span>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="t-toys" class="type-check"/>
+                <label for="t-toys" class="type-label">
+                  <span class="type-label-icon">🎮</span>
+                  <span class="type-label-text">Toys</span>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="t-whole" class="type-check"/>
+                <label for="t-whole" class="type-label">
+                  <span class="type-label-icon">📦</span>
+                  <span class="type-label-text">Whole Collection</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="frow">
+            <div class="ff">
+              <label>Approximate Quantity</label>
+              <select>
+                <option value="">How many pieces?</option>
+                <option>1–25 items</option>
+                <option>25–100 items</option>
+                <option>100–500 items</option>
+                <option>500–1,000 items</option>
+                <option>1,000+ items</option>
+                <option>Unsure — it's a lot</option>
+              </select>
+            </div>
+            <div class="ff">
+              <label>Era / Decade</label>
+              <select>
+                <option value="">Any / Multiple</option>
+                <option>1930s–1950s (Golden)</option>
+                <option>1960s (Silver Age)</option>
+                <option>1970s (Bronze Age)</option>
+                <option>1980s (Copper Age)</option>
+                <option>1990s–2000s</option>
+                <option>2010s–Present</option>
+                <option>Mixed Eras</option>
+              </select>
+            </div>
+          </div>
+          <div class="frow full">
+            <div class="ff">
+              <label>Any Key Issues or Notable Pieces You Know About?</label>
+              <textarea placeholder="First appearances, graded slabs, rare issues, complete runs, character focus… anything helps us prepare"></textarea>
+            </div>
+          </div>
+          <div class="frow full">
+            <div class="ff">
+              <label>Overall Condition</label>
+              <select>
+                <option value="">Not Sure / Haven't Looked Closely</option>
+                <option>Mostly High Grade (stored well, bagged & boarded)</option>
+                <option>Mixed — some nice, some rough</option>
+                <option>Reading copies / well-loved</option>
+                <option>Unknown — inherited or found</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="fsec">
+          <div class="fsec-title">Upload Photos (Optional but Helpful)</div>
+          <div class="upload-box" onclick="document.getElementById('photo-upload').click()">
+            <div class="upload-icon">📷</div>
+            <div class="upload-text">Tap to add photos</div>
+            <div class="upload-hint">5–10 photos of your collection, any key covers, and storage condition</div>
+            <input type="file" id="photo-upload" multiple accept="image/*" style="display:none"/>
+          </div>
+        </div>
+
+        <div class="fsec">
+          <div class="fsec-title">Your Info</div>
+          <div class="frow full">
+            <div class="ff">
+              <label>Full Name *</label>
+              <input type="text" placeholder="First & Last Name" required/>
+            </div>
+          </div>
+          <div class="frow">
+            <div class="ff">
+              <label>Phone / Text *</label>
+              <input type="tel" placeholder="(417) XXX-XXXX" required/>
+            </div>
+            <div class="ff">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com"/>
+            </div>
+          </div>
+          <div class="frow full">
+            <div class="ff">
+              <label>ZIP Code</label>
+              <input type="text" placeholder="Your ZIP — helps us plan if we're coming to you" maxlength="10"/>
+            </div>
+          </div>
+          <div class="frow full">
+            <div class="ff">
+              <label>How Would You Prefer We Reach Out?</label>
+              <select>
+                <option>Text me first</option>
+                <option>Call me first</option>
+                <option>Email me first</option>
+                <option>Any — fastest is fine</option>
+              </select>
+            </div>
+          </div>
+          <div class="frow full">
+            <div class="ff">
+              <label>Anything Else We Should Know?</label>
+              <textarea placeholder="Timeline, access notes for large collections, specific books you're curious about, etc."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-r btn-full" style="font-size:17px;padding:16px">💰 Request My Free Appraisal</button>
+        <p style="font-family:var(--fc);font-size:12px;color:var(--gray);text-align:center;margin-top:10px;letter-spacing:.03em">Free · No obligation · Jeff responds within 24 hours</p>
+
+        <div style="margin-top:22px;padding-top:22px;border-top:1px solid var(--border)">
+          <div style="font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);text-align:center;margin-bottom:10px">Or walk in or call</div>
+          <a href="tel:+14175550000" class="btn btn-dark btn-full">📞 Call Jeff Directly — (417) 555-0000</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY JEFF -->
+<section class="why">
+  <div class="wrap">
+    <div class="why-grid">
+      <div>
+        <div class="eyebrow">Family-Owned · Collector-Run</div>
+        <div class="why-quote">"I'VE BEEN DOING THIS FOR YEARS. I KNOW WHAT THINGS ARE WORTH."</div>
+        <p class="why-p">Jeff isn't just a buyer — he's a collector. He knows what Amazing Fantasy #15 feels like. He knows the difference between a pedigree copy and a raw FN-. He knows what's hot right now and what the actual market is paying.</p>
+        <p class="why-p">That means when he makes you an offer, it's a real offer based on real market data — not a low-ball hoping you don't know better. He'll explain what he's paying and why, and he'll tell you if something is worth more than he can pay.</p>
+        <p class="why-p">He's built his business on repeat sellers and word-of-mouth. The Springfield community specifically recommends Another Comic Shop because the experience is fair.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px">
+          <a href="#" class="btn btn-y btn-lg">Get Your Free Appraisal ↑</a>
+          <a href="tel:+14175550000" class="btn btn-dark btn-lg">📞 Call Jeff</a>
+        </div>
+      </div>
+      <div class="why-visual">
+        <div class="why-big">
+          <span>FAIR</span>
+          <span class="wy">OFFER.</span>
+          <span>FAST</span>
+          <span class="wr">CASH.</span>
+          <span>YOUR</span>
+          <span>CHOICE.</span>
+        </div>
+        <div class="why-sub">Another Comic Shop · Jeff & Rhonda · Springfield, MO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCAL SEO / SPRINGFIELD -->
+<section class="local">
+  <div class="wrap">
+    <div class="eyebrow">Serving Springfield, MO & the Ozarks</div>
+    <h2 class="sec-h">WHERE TO <span class="text-y">SELL COMICS</span><br>IN SPRINGFIELD, MO</h2>
+    <p style="font-size:16px;color:var(--gl);max-width:620px;line-height:1.75">Another Comic Shop is Springfield's go-to destination for selling comic collections. Whether you have a single key issue or an entire room, Jeff makes it easy.</p>
+    <div class="local-grid">
+      <div class="local-card">
+        <div class="local-card-h">Sell Comic Books in Springfield, MO</div>
+        <p class="local-card-p">Another Comic Shop buys raw and graded comics from every era. Golden Age to Modern. Single issues to complete collection rooms. Jeff pays fair and pays fast.</p>
+      </div>
+      <div class="local-card">
+        <div class="local-card-h">Comic Book Appraisals — Springfield, MO</div>
+        <p class="local-card-p">Not sure what you have? Bring it in. Jeff will look through your collection, identify key issues, and give you an honest assessment of what you've got — for free.</p>
+      </div>
+      <div class="local-card">
+        <div class="local-card-h">Sell Funko Pop in Springfield, MO</div>
+        <p class="local-card-p">Vaulted Funkos, exclusives, chases, and grail pieces. Whether it's 5 pieces or 500, Another Comic Shop buys Funko Pop collections in Springfield.</p>
+      </div>
+      <div class="local-card">
+        <div class="local-card-h">Sell Action Figures in Springfield, MO</div>
+        <p class="local-card-p">Vintage and modern action figures — carded, loose, or complete sets. Marvel, DC, Star Wars, MOTU, TMNT and more. Fair offers, same-day decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">ANOTHER COMIC SHOP</div>
+        <p class="footer-tagline">Springfield's home for back issues, collectibles & pop culture. Family-owned by Jeff & Rhonda.</p>
+        <div class="footer-socials">
+          <a href="#" class="fsoc">f</a><a href="#" class="fsoc">ig</a><a href="#" class="fsoc">tt</a><a href="#" class="fsoc">yt</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <ul class="footer-links">
+          <li><a href="acs-shop.html">All Inventory</a></li>
+          <li><a href="acs-shop.html#vault">The Vault</a></li>
+          <li><a href="acs-shop.html#just-in">Just In</a></li>
+          <li><a href="acs-shop.html#picks">Jeff's Picks</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="acs-hunt.html">Hunt My Comic</a></li>
+          <li><a href="acs-sell.html">Sell Your Collection</a></li>
+          <li><a href="acs-sell.html">Free Appraisals</a></li>
+          <li><a href="acs-sell.html">Buy · Sell · Trade</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Find Us</div>
+        <ul class="footer-links">
+          <li><a href="acs-index.html#about">About Us</a></li>
+          <li><a href="acs-index.html#visit">Hours & Location</a></li>
+          <li><a href="acs-index.html#visit">Springfield, MO</a></li>
+        </ul>
+        <div style="margin-top:18px">
+          <div class="footer-col-title">Hours</div>
+          <div style="font-size:13px;color:var(--gray);line-height:1.75">Mon–Sat: 10am–6pm<br>Sun: Noon–5pm<br><a href="tel:+14175550000" style="color:var(--y)">(417) 555-0000</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2025 Another Comic Shop · Springfield, MO</div>
+      <div style="display:flex;gap:20px">
+        <a href="#">Privacy</a>
+        <a href="https://thefarmmedia.com" target="_blank">Site by The Farm Media</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const ham = document.querySelector('.hamburger');
+  const mob = document.querySelector('.mob-menu');
+  if(ham && mob) ham.addEventListener('click', () => mob.classList.toggle('open'));
+</script>
+</body>
+</html>

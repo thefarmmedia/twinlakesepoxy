@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hunt My Comic | Another Comic Shop — Springfield, MO</title>
+  <meta name="description" content="Can't find a specific back issue? Another Comic Shop's Hunt List tracks down the comics you're missing. Tell us what you're looking for — we'll call you when it comes in."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--y:#FFE000;--yd:#C9B000;--r:#D4141A;--rd:#A30F14;--b:#1565C0;--bg:#080808;--bg2:#101010;--bg3:#181818;--bg4:#222;--border:rgba(255,255,255,.08);--gray:#888;--gl:#bbb;--white:#fff;--fd:'Bangers',cursive;--fc:'Barlow Condensed',sans-serif;--fb:'Barlow',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--white);font-family:var(--fb);overflow-x:hidden;line-height:1.6}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+
+    /* TOP BAR */
+    .topbar{background:var(--r);padding:7px 32px;display:flex;justify-content:space-between;align-items:center;font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;flex-wrap:wrap;gap:8px;z-index:200;position:relative}
+    .topbar-l{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+    .t-social{width:26px;height:26px;background:rgba(0,0,0,.3);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;transition:background .2s}
+    .t-social:hover{background:rgba(0,0,0,.5)}
+
+    /* NAV */
+    nav{background:var(--bg);border-bottom:3px solid var(--y);padding:0 32px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:999;height:70px}
+    .nav-logo-text{font-family:var(--fd);font-size:26px;letter-spacing:.04em;color:var(--y);text-shadow:2px 2px 0 var(--r);line-height:1}
+    .nav-logo-sub{font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);display:block;margin-top:-1px}
+    .nav-links{display:flex;gap:4px;list-style:none;font-family:var(--fc);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;align-items:center}
+    .nav-links a{color:var(--gl);transition:color .2s;padding:6px 10px;border-radius:3px}
+    .nav-links a:hover,.nav-links a.active{color:var(--y)}
+    .nav-cta{background:var(--y)!important;color:var(--bg)!important;padding:9px 18px!important;border-radius:4px!important;font-weight:900!important;transition:background .2s,transform .15s!important}
+    .nav-cta:hover{background:var(--yd)!important;transform:translateY(-1px)!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px}
+    .mob-menu{display:none;flex-direction:column;background:var(--bg);border-top:2px solid var(--y);padding:16px 24px;gap:0;font-family:var(--fc);font-size:17px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;position:relative;z-index:998}
+    .mob-menu a{color:var(--gl);padding:12px 0;border-bottom:1px solid var(--border);display:block}
+    .mob-menu a:last-child{color:var(--y);border-bottom:none}
+    .mob-menu.open{display:flex}
+
+    /* PAGE HERO */
+    .page-hero{background:var(--bg2);padding:72px 0 60px;position:relative;overflow:hidden;border-bottom:3px solid var(--r)}
+    .page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(212,20,26,.1) 1.5px,transparent 1.5px);background-size:28px 28px}
+    .page-hero::after{content:'HUNT';position:absolute;font-family:var(--fd);font-size:clamp(160px,26vw,340px);color:rgba(255,255,255,.018);top:50%;right:-2%;transform:translateY(-50%);line-height:1;pointer-events:none}
+    .page-hero-inner{max-width:1300px;margin:0 auto;padding:0 40px;position:relative;z-index:1}
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:20px}
+    .breadcrumb a{color:var(--gray);transition:color .2s}
+    .breadcrumb a:hover{color:var(--y)}
+    .breadcrumb span{opacity:.4}
+    .eyebrow{font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--y);margin-bottom:10px}
+    .page-h{font-family:var(--fd);font-size:clamp(56px,10vw,120px);line-height:.88;letter-spacing:.03em;margin-bottom:20px}
+    .page-sub{font-family:var(--fc);font-size:clamp(16px,2vw,20px);font-weight:600;color:var(--gl);max-width:620px;line-height:1.55;letter-spacing:.03em}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 28px;border-radius:4px;font-family:var(--fc);font-size:16px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+    .btn-y{background:var(--y);color:var(--bg)}
+    .btn-y:hover{background:var(--yd);transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,224,0,.3)}
+    .btn-r{background:var(--r);color:var(--white)}
+    .btn-r:hover{background:var(--rd);transform:translateY(-2px)}
+    .btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.2)}
+    .btn-outline:hover{border-color:var(--y);color:var(--y)}
+    .btn-full{width:100%}
+    .btn-lg{padding:17px 34px;font-size:17px}
+
+    /* LAYOUT */
+    .wrap{max-width:1300px;margin:0 auto;padding:0 40px}
+    section{padding:72px 0}
+    .stripe{height:4px;background:linear-gradient(90deg,var(--y) 0%,var(--r) 50%,var(--b) 100%)}
+
+    /* HOW IT WORKS */
+    .how{background:var(--bg)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;position:relative}
+    .steps::before{content:'';position:absolute;top:28px;left:calc(12.5%);right:calc(12.5%);height:2px;background:linear-gradient(90deg,var(--y),var(--r));z-index:0}
+    .step{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:28px 22px;position:relative;z-index:1;text-align:center}
+    .step-num{width:52px;height:52px;background:var(--y);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:26px;color:var(--bg);margin:0 auto 18px;position:relative;z-index:2;flex-shrink:0}
+    .step-icon{font-size:26px;margin-bottom:12px}
+    .step-h{font-family:var(--fd);font-size:20px;letter-spacing:.04em;margin-bottom:8px}
+    .step-p{font-size:14px;color:var(--gl);line-height:1.65}
+
+    /* MAIN HUNT FORM */
+    .hunt-main{background:var(--bg2)}
+    .hunt-layout{display:grid;grid-template-columns:1fr 420px;gap:56px;align-items:start}
+    .hunt-form-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:40px;position:sticky;top:88px}
+    .form-title{font-family:var(--fd);font-size:28px;letter-spacing:.04em;color:var(--y);margin-bottom:8px}
+    .form-title-sub{font-size:14px;color:var(--gl);margin-bottom:28px}
+    .form-section{margin-bottom:28px}
+    .form-section-title{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--r);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+    .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+    .frow.full{grid-template-columns:1fr}
+    .ff{display:flex;flex-direction:column;gap:6px}
+    .ff label{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gl)}
+    .ff input,.ff select,.ff textarea{background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:11px 14px;color:var(--white);font-family:var(--fb);font-size:14px;outline:none;transition:border-color .2s;width:100%}
+    .ff input:focus,.ff select:focus,.ff textarea:focus{border-color:var(--y)}
+    .ff select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath fill='%23888' d='M5 7L0 0h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+    .ff select option{background:var(--bg4)}
+    .ff textarea{resize:vertical;min-height:80px}
+    .char-checkboxes{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+    .char-check{display:none}
+    .char-check-label{font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:6px 13px;background:var(--bg4);border:1px solid var(--border);border-radius:999px;cursor:pointer;transition:all .2s;color:var(--gl)}
+    .char-check:checked+.char-check-label{background:var(--r);border-color:var(--r);color:var(--white)}
+    .char-check-label:hover{border-color:var(--gl)}
+
+    /* HUNT LIST INFO PANEL */
+    .hunt-info{display:flex;flex-direction:column;gap:24px}
+    .info-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:28px}
+    .info-card-h{font-family:var(--fd);font-size:22px;letter-spacing:.04em;color:var(--y);margin-bottom:8px}
+    .info-card-p{font-size:15px;color:var(--gl);line-height:1.7}
+    .hunt-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .hstat{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:18px;text-align:center}
+    .hstat-n{font-family:var(--fd);font-size:36px;color:var(--y);line-height:1}
+    .hstat-l{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-top:3px}
+    .scenario-box{background:rgba(255,224,0,.06);border:1px solid rgba(255,224,0,.18);border-radius:6px;padding:22px}
+    .scenario-box-h{font-family:var(--fd);font-size:17px;letter-spacing:.04em;color:var(--y);margin-bottom:10px}
+    .scenario-box-q{font-style:italic;font-size:15px;color:var(--gl);line-height:1.65;margin-bottom:12px}
+    .scenario-box-a{background:var(--bg4);border-left:3px solid var(--r);border-radius:3px;padding:12px 14px;font-size:14px;color:var(--gl);line-height:1.6}
+    .scenario-box-a strong{color:var(--white)}
+
+    /* WHAT WE CAN HUNT */
+    .can-hunt{background:var(--bg)}
+    .can-hunt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+    .ch-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:26px 22px;transition:border-color .2s}
+    .ch-card:hover{border-color:var(--y)}
+    .ch-icon{font-size:28px;margin-bottom:12px}
+    .ch-h{font-family:var(--fd);font-size:22px;letter-spacing:.04em;margin-bottom:8px}
+    .ch-p{font-size:14px;color:var(--gl);line-height:1.65}
+    .ch-list{list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:5px}
+    .ch-list li{font-family:var(--fc);font-size:13px;font-weight:600;letter-spacing:.03em;color:var(--gl);display:flex;align-items:center;gap:8px}
+    .ch-list li::before{content:'◆';color:var(--y);font-size:8px;flex-shrink:0}
+
+    /* FOOTER */
+    footer{background:var(--bg);border-top:3px solid var(--y);padding:50px 0 26px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px}
+    .footer-brand{font-family:var(--fd);font-size:26px;letter-spacing:.04em;color:var(--y);text-shadow:2px 2px 0 var(--r);margin-bottom:10px}
+    .footer-tagline{font-size:14px;color:var(--gray);line-height:1.75;margin-bottom:16px;max-width:260px}
+    .footer-socials{display:flex;gap:8px}
+    .fsoc{width:34px;height:34px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:var(--fc);font-size:12px;font-weight:900;transition:all .2s}
+    .fsoc:hover{background:var(--y);color:var(--bg);border-color:var(--y)}
+    .footer-col-title{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--y);margin-bottom:14px}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .footer-links a{font-size:14px;color:var(--gray);transition:color .2s}
+    .footer-links a:hover{color:var(--white)}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--gray)}
+    .footer-bottom a{color:var(--gray);transition:color .2s}
+    .footer-bottom a:hover{color:var(--y)}
+
+    @media(max-width:1000px){
+      .hunt-layout{grid-template-columns:1fr}
+      .hunt-form-card{position:static}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .steps::before{display:none}
+      .can-hunt-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+      .hunt-stats{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(max-width:640px){
+      .wrap,.page-hero-inner{padding:0 20px}
+      nav{padding:0 16px}
+      .nav-links{display:none}
+      .hamburger{display:flex}
+      .topbar{padding:6px 16px;font-size:11px}
+      .steps{grid-template-columns:1fr}
+      .can-hunt-grid{grid-template-columns:1fr}
+      .frow{grid-template-columns:1fr}
+      .hunt-stats{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr}
+      section{padding:52px 0}
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-l">
+    <span>📍 Springfield, MO</span>
+    <a href="tel:+14175550000">📞 (417) 555-0000</a>
+    <span>Mon–Sat 10am–6pm · Sun Noon–5pm</span>
+  </div>
+  <div class="topbar-r" style="display:flex;gap:8px">
+    <a href="#" class="t-social">f</a>
+    <a href="#" class="t-social">ig</a>
+    <a href="#" class="t-social">tt</a>
+  </div>
+</div>
+
+<nav>
+  <a href="acs-index.html">
+    <div class="nav-logo-text">ANOTHER COMIC SHOP</div>
+    <span class="nav-logo-sub">Springfield, Missouri</span>
+  </a>
+  <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.mob-menu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="acs-shop.html">Shop</a></li>
+    <li><a href="acs-hunt.html" class="active">Hunt a Comic</a></li>
+    <li><a href="acs-index.html#characters">Characters</a></li>
+    <li><a href="acs-sell.html">Sell / Trade</a></li>
+    <li><a href="acs-index.html#visit">Visit Us</a></li>
+    <li><a href="acs-index.html#about">About</a></li>
+    <li><a href="acs-sell.html" class="nav-cta">Free Appraisal</a></li>
+  </ul>
+</nav>
+<div class="mob-menu">
+  <a href="acs-shop.html">Shop</a>
+  <a href="acs-hunt.html">Hunt a Comic</a>
+  <a href="acs-sell.html">Sell / Trade</a>
+  <a href="acs-index.html#visit">Visit Us</a>
+  <a href="acs-index.html#about">About</a>
+  <a href="acs-sell.html">Free Appraisal →</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="acs-index.html">Home</a>
+      <span>›</span>
+      <span style="color:var(--gl)">Hunt a Comic</span>
+    </div>
+    <div class="eyebrow">🔎 The Hunt List</div>
+    <h1 class="page-h">HUNT MY<br><span style="color:var(--y);text-shadow:3px 3px 0 var(--r)">COMIC.</span></h1>
+    <p class="page-sub">Can't find a specific issue? Tell us exactly what you're after. We'll search our inventory, check our dealer network, and call you the moment it walks through our door.</p>
+  </div>
+</div>
+
+<div class="stripe"></div>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="eyebrow">Simple Process</div>
+    <h2 style="font-family:var(--fd);font-size:clamp(38px,5vw,70px);letter-spacing:.03em;line-height:.92;margin-bottom:16px">HOW IT <span style="color:var(--y)">WORKS</span></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-h">Tell Us What You're Hunting</div>
+        <p class="step-p">Fill out the form below with as much detail as you have — series, issue number, era, condition, budget. The more we know, the better we can search.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-h">We Search Our Inventory</div>
+        <p class="step-p">Jeff searches our entire back issue stock — including stuff that hasn't been fully cataloged yet. We know our boxes better than our database.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-h">We Hit Our Dealer Network</div>
+        <p class="step-p">Not in stock? We reach out to our network of dealers, fellow shops, and regular sellers. If it's findable, we'll find it.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-h">You Get The Call First</div>
+        <p class="step-p">The moment a copy comes through our doors — whether from a collection we bought or a dealer find — you're the first call. Before it goes on the shelf.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<!-- MAIN HUNT FORM -->
+<section class="hunt-main">
+  <div class="wrap">
+    <div class="hunt-layout">
+      <!-- INFO SIDE -->
+      <div class="hunt-info">
+        <div class="eyebrow">Why Use the Hunt List?</div>
+        <h2 style="font-family:var(--fd);font-size:clamp(36px,4.5vw,62px);letter-spacing:.03em;line-height:.92;margin-bottom:28px">STOP <span style="color:var(--y)">MISSING</span> THE BOOKS YOU WANT</h2>
+
+        <div class="hunt-stats">
+          <div class="hstat">
+            <div class="hstat-n">10K+</div>
+            <div class="hstat-l">Back Issues In Stock</div>
+          </div>
+          <div class="hstat">
+            <div class="hstat-n">48hr</div>
+            <div class="hstat-l">Avg Response</div>
+          </div>
+          <div class="hstat">
+            <div class="hstat-n">Free</div>
+            <div class="hstat-l">No Cost to Join</div>
+          </div>
+        </div>
+
+        <div class="info-card" style="margin-top:8px">
+          <div class="info-card-h">🎯 Your Personal Hunt List</div>
+          <p class="info-card-p">Every comic you submit goes on your personal hunt list. You're not just sending a form into a void — Jeff actually reads these and actively looks when new collections come in. You can add as many books as you want.</p>
+        </div>
+
+        <div class="scenario-box">
+          <div class="scenario-box-h">How It Plays Out</div>
+          <p class="scenario-box-q">"I've been looking for Amazing Spider-Man #129 in VF for two years. I submit it on the Hunt List."</p>
+          <div class="scenario-box-a">Six weeks later, Jeff buys a collection with a VF copy. Before it's bagged, tagged, or priced — <strong>your phone rings.</strong> "Hey, this is Jeff at Another Comic Shop. That ASM 129 you've been hunting? Just came in. Want me to hold it?"</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-h">📦 We Buy Collections Weekly</div>
+          <p class="info-card-p">Because we actively buy collections from all over the Ozarks, new inventory comes through the door constantly — stuff that's never been online, never been on eBay. Hunt List subscribers get first crack at all of it.</p>
+        </div>
+
+        <div class="info-card" style="border-color:rgba(255,224,0,.2)">
+          <div class="info-card-h" style="color:var(--white)">Not sure what issue it is?</div>
+          <p class="info-card-p">No problem. Tell us the character, approximate era, and anything you remember about the cover or story. We're collectors — we can usually figure it out.</p>
+          <div style="margin-top:14px">
+            <a href="tel:+14175550000" class="btn btn-y" style="font-size:14px;padding:10px 22px">📞 Call Jeff Directly</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM SIDE -->
+      <div class="hunt-form-card">
+        <div class="form-title">🔎 Start Your Hunt</div>
+        <div class="form-title-sub">Fill out what you know — you don't need every field.</div>
+
+        <div class="form-section">
+          <div class="form-section-title">What Are You Looking For?</div>
+          <div class="frow">
+            <div class="ff">
+              <label>Series / Title *</label>
+              <input type="text" placeholder="Amazing Spider-Man, X-Men…" required/>
+            </div>
+            <div class="ff">
+              <label>Issue # (if known)</label>
+              <input type="text" placeholder="300, 1, Annual #2…"/>
+            </div>
+          </div>
+          <div class="frow">
+            <div class="ff">
+              <label>Publisher</label>
+              <select>
+                <option value="">Any Publisher</option>
+                <option>Marvel</option>
+                <option>DC Comics</option>
+                <option>Image</option>
+                <option>Dark Horse</option>
+                <option>IDW</option>
+                <option>Valiant</option>
+                <option>Indie / Other</option>
+              </select>
+            </div>
+            <div class="ff">
+              <label>Era / Decade</label>
+              <select>
+                <option value="">Any Era</option>
+                <option>Golden Age (1938–1956)</option>
+                <option>Silver Age (1956–1970)</option>
+                <option>Bronze Age (1970–1985)</option>
+                <option>Copper Age (1985–1992)</option>
+                <option>Modern (1992–Present)</option>
+              </select>
+            </div>
+          </div>
+          <div class="frow full">
+            <div class="ff">
+              <label>Any details you remember about the issue?</label>
+              <textarea placeholder="Cover description, story, key appearance, variant cover, year if you know it…"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-title">Condition & Budget</div>
+          <div class="frow">
+            <div class="ff">
+              <label>Minimum Condition</label>
+              <select>
+                <option value="">Any Condition</option>
+                <option>High Grade Only (VF–NM)</option>
+                <option>Mid Grade OK (VG–FN)</option>
+                <option>Reading Copy Fine (Any)</option>
+                <option>Graded / CGC Slabbed</option>
+              </select>
+            </div>
+            <div class="ff">
+              <label>Max Budget</label>
+              <input type="text" placeholder="$50, $200, No limit…"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-title">Your Info</div>
+          <div class="frow full">
+            <div class="ff">
+              <label>Full Name *</label>
+              <input type="text" placeholder="First & Last Name" required/>
+            </div>
+          </div>
+          <div class="frow">
+            <div class="ff">
+              <label>Phone / Text *</label>
+              <input type="tel" placeholder="(417) XXX-XXXX" required/>
+            </div>
+            <div class="ff">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com"/>
+            </div>
+          </div>
+          <div class="frow full">
+            <div class="ff">
+              <label>Best Way to Reach You</label>
+              <select>
+                <option>Text me first</option>
+                <option>Call me first</option>
+                <option>Email me first</option>
+                <option>Any — fastest is fine</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-r btn-full" style="font-size:17px;padding:16px">🔎 Add to My Hunt List</button>
+        <p style="font-family:var(--fc);font-size:12px;color:var(--gray);text-align:center;margin-top:10px;letter-spacing:.03em">Free · No spam · We only reach out when we find your book</p>
+
+        <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border);text-align:center">
+          <div style="font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin-bottom:10px">Or just call Jeff</div>
+          <a href="tel:+14175550000" class="btn btn-outline btn-full" style="font-size:15px"">📞 (417) 555-0000</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<!-- WHAT WE CAN HUNT -->
+<section class="can-hunt">
+  <div class="wrap">
+    <div class="eyebrow">No Limits on the Hunt</div>
+    <h2 style="font-family:var(--fd);font-size:clamp(38px,5vw,68px);letter-spacing:.03em;line-height:.92;margin-bottom:16px">WE HUNT <span style="color:var(--y)">EVERYTHING</span></h2>
+    <p style="font-size:16px;color:var(--gl);max-width:580px;line-height:1.75;margin-bottom:0">If it's a comic, a collection piece, or a collectible — and it's been made at some point in history — we'll try to find it.</p>
+    <div class="can-hunt-grid">
+      <div class="ch-card">
+        <div class="ch-icon">📚</div>
+        <div class="ch-h">Back Issues</div>
+        <p class="ch-p">Single issues from any era. Golden Age originals to last month's keys.</p>
+        <ul class="ch-list">
+          <li>Marvel, DC, Image, Indie</li>
+          <li>Golden through Modern Age</li>
+          <li>First appearances & key issues</li>
+          <li>Full runs & partial runs</li>
+        </ul>
+      </div>
+      <div class="ch-card">
+        <div class="ch-icon">💎</div>
+        <div class="ch-h">Graded Books</div>
+        <p class="ch-p">Looking for a specific CGC or CBCS grade? We hunt the slabs too.</p>
+        <ul class="ch-list">
+          <li>CGC graded comics</li>
+          <li>CBCS graded books</li>
+          <li>Specific grade thresholds</li>
+          <li>Signed/witnessed slabs</li>
+        </ul>
+      </div>
+      <div class="ch-card">
+        <div class="ch-icon">🎨</div>
+        <div class="ch-h">Variants & Rare Covers</div>
+        <p class="ch-p">Convention exclusives, newsstand editions, printing variants, incentive covers.</p>
+        <ul class="ch-list">
+          <li>Newsstand vs direct editions</li>
+          <li>Convention exclusive covers</li>
+          <li>Ratio incentive variants</li>
+          <li>Recalled / error editions</li>
+        </ul>
+      </div>
+      <div class="ch-card">
+        <div class="ch-icon">🤖</div>
+        <div class="ch-h">Collectibles & Figures</div>
+        <p class="ch-p">Not just comics. Action figures, statues, Funko exclusives, vintage toys.</p>
+        <ul class="ch-list">
+          <li>Action figures (vintage & new)</li>
+          <li>Limited edition Funko Pop</li>
+          <li>Statues & busts</li>
+          <li>Vintage toy line pieces</li>
+        </ul>
+      </div>
+      <div class="ch-card">
+        <div class="ch-icon">📖</div>
+        <div class="ch-h">Trade Paperbacks & Hardcovers</div>
+        <p class="ch-p">Out-of-print trades, OHC omnibuses, Absolute Editions, Absolute Carnage collections.</p>
+        <ul class="ch-list">
+          <li>Out-of-print trades</li>
+          <li>Marvel/DC omnibuses</li>
+          <li>Absolute & Deluxe editions</li>
+          <li>Foreign & international editions</li>
+        </ul>
+      </div>
+      <div class="ch-card">
+        <div class="ch-icon">🎭</div>
+        <div class="ch-h">Not Sure What You Have?</div>
+        <p class="ch-p">Have a vague memory of a cover but don't know the issue? Describe it — Jeff's identified books from fuzzier descriptions than you've got.</p>
+        <div style="margin-top:16px">
+          <a href="tel:+14175550000" class="btn btn-y" style="font-size:14px;padding:10px 22px">📞 Call & Describe It</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">ANOTHER COMIC SHOP</div>
+        <p class="footer-tagline">Springfield's home for back issues, collectibles & pop culture. Family-owned by Jeff & Rhonda.</p>
+        <div class="footer-socials">
+          <a href="#" class="fsoc">f</a><a href="#" class="fsoc">ig</a><a href="#" class="fsoc">tt</a><a href="#" class="fsoc">yt</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <ul class="footer-links">
+          <li><a href="acs-shop.html">All Inventory</a></li>
+          <li><a href="acs-shop.html#vault">The Vault</a></li>
+          <li><a href="acs-shop.html#just-in">Just In</a></li>
+          <li><a href="acs-shop.html#picks">Jeff's Picks</a></li>
+          <li><a href="acs-shop.html#under10">Under $10</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="acs-hunt.html">Hunt My Comic</a></li>
+          <li><a href="acs-sell.html">Sell Your Collection</a></li>
+          <li><a href="acs-sell.html">Free Appraisals</a></li>
+          <li><a href="acs-sell.html">Buy · Sell · Trade</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Find Us</div>
+        <ul class="footer-links">
+          <li><a href="acs-index.html#about">About Us</a></li>
+          <li><a href="acs-index.html#visit">Hours & Location</a></li>
+          <li><a href="acs-index.html#visit">Springfield, MO</a></li>
+        </ul>
+        <div style="margin-top:18px">
+          <div class="footer-col-title">Hours</div>
+          <div style="font-size:13px;color:var(--gray);line-height:1.75">Mon–Sat: 10am–6pm<br>Sun: Noon–5pm<br><a href="tel:+14175550000" style="color:var(--y)">(417) 555-0000</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2025 Another Comic Shop · Springfield, MO</div>
+      <div style="display:flex;gap:20px">
+        <a href="#">Privacy</a>
+        <a href="https://thefarmmedia.com" target="_blank">Site by The Farm Media</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const ham = document.querySelector('.hamburger');
+  const mob = document.querySelector('.mob-menu');
+  if(ham && mob) ham.addEventListener('click', () => mob.classList.toggle('open'));
+</script>
+</body>
+</html>
